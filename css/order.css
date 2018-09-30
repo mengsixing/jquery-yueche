@@ -1,0 +1,292 @@
+/*
+for：立即下单
+date：2018-09
+*/
+/* CSS Document */
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	position: relative;
+}
+
+/*
+主体
+*/
+#order {
+	width: 100%;
+	margin-top: .15rem;
+}
+.main {
+	width: 93%;
+	height: 100%;
+	background-color: #fff;
+	box-shadow: .03rem .03rem .03rem rgba(51,51,51,.1), -.03rem -.03rem .03rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	position: relative;
+}
+.box {
+	height: calc(100% - .18rem);
+	overflow: hidden;
+	overflow-y: scroll;
+}
+/*item*/
+.item {
+	width: 100%;
+	height: .66rem;
+	overflow: hidden;
+	padding: 0 .2rem;
+	border-bottom: 1px solid #f1f1f1;
+}
+.item label,
+.item input {
+	font-size: .16rem;
+	line-height: .66rem;
+}
+.item label {
+	width: .94rem;
+	color: #333;
+}
+.item input {
+	width: calc(100% - .94rem);
+	color: #757575;
+	border: 0;
+}
+/*line*/
+.line span {
+	width: .2rem;
+	height: .66rem;
+}
+.line span i {
+	width: .1rem;
+	height: .1rem;
+	background-color: #5eb95e;
+	display: block;
+	margin-top: .28rem;
+}
+.line span.danger i {
+	background-color: #d00;
+}
+.line .city {
+	font-size: .16rem;
+	color: #757575;
+	line-height: .66rem;
+}
+.line .switch {
+	width: .5rem;
+	height: .66rem;
+}
+.line .switch i {
+	font-size: .2rem;
+	color: #ddd;
+	line-height: .66rem;
+}
+/*tab*/
+.nav {	
+	height: .88rem;
+}
+.nav label {
+	line-height: .88rem;
+}
+.nav nav {
+	font-size: 0;
+	margin-top: .24rem;
+}
+.nav nav a {
+	font-size: .16rem;
+	color: #757575;
+	line-height: .38rem;
+	border: 1px solid #fff;
+	border-radius: 200px;
+	display: inline-block;
+	margin-right: .06rem;
+	padding: 0 .18rem;
+}
+.nav nav a.active {
+	color: #333;
+	border-color: #ddd;
+}
+/*select*/
+.select {
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: pointer;
+	display: none;
+}
+.select.active {
+	display: block;
+}
+.select input {
+	width: calc(100% - 1.18rem);
+}
+.select span {
+	width: .24rem;
+	/*cursor: pointer;*/
+}
+.select span i {
+	font-size: .3rem;
+	color: #ccc;
+	line-height: .66rem;
+}
+/*option*/
+.option {
+	width: 93%;
+	max-height: 1.88rem;
+	overflow-y: scroll;
+	display: none;
+}
+.option li {
+	width: calc(100% - 1.14rem);
+	margin-left: 1.14rem;
+	height: .47rem;
+	overflow: hidden;
+	font-size: .14rem;
+	color: #333;
+	line-height: .47rem;
+	border-bottom: 1px solid #f1f1f1;
+	cursor: pointer;
+}
+.option li:hover,
+.option li:active {
+	color: #d00;
+	border-color: #d00;
+}
+/*price*/
+.price {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: #fff;
+	padding: .15rem 0 .2rem;
+}
+.price .pay {
+	font-size: .16rem;
+	color: #333;
+}
+.price .pay span {
+	font-size: .28rem;
+	color: #d00;
+	font-weight: 600;
+}
+.price .ticket {
+	font-size: .12rem;
+	color: #757575;
+	margin-top: .03rem;
+	display: none;
+}
+main.tick .price .ticket {
+	display: block;
+}
+
+/*
+底部
+*/
+#footer {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: #f1f1f1;
+}
+/*footer*/
+.footer {
+	width: 100%;
+}
+.footer div {
+	font-size: .14rem;
+	color: #757575;
+	margin-top: .15rem;
+	display: none;
+}
+#footer.num .footer .num,
+#footer.time .footer .time {
+	display: block;
+}
+.footer div span {
+	color: #d00;
+}
+.footer p {
+	width: 93%;
+	margin-top: .15rem;
+	margin-bottom: .2rem;
+}
+.am-btn-danger {
+	background-color: #eb6666;
+	border-color: #eb6666;
+	font-size: .16rem;
+	color: #fff;
+	line-height: .5rem;
+	border-radius: .1rem;
+}
+.am-btn-danger:focus,
+.am-btn-danger:hover {
+	background-color: #d00;
+	border-color: #d00;
+}
+
+/*
+提示
+*/
+#tips {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 11;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform .3s;
+	transition: transform .3s;
+}
+#tips.active {
+	-webkit-transform: none;
+	transform: none;
+}
+.tipBox {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.tips {
+	position: absolute;
+	top: 50%;
+	left: 22%;
+	width: 56%;
+	background-color: #fff;
+	margin-top: -.8rem;
+	border-radius: .05rem;
+}
+.tips header,
+.tips main,
+.tips footer {	
+	width: 100%;
+}
+.tips header {
+	padding: .15rem 0;
+	font-size: .12rem;
+	color: #757575;
+	line-height: .25rem;
+	border-bottom: 1px solid #f1f1f1;
+	display: table;
+}
+.tips main {
+	font-size: .16rem;
+	color: #333;
+	line-height: .39rem;
+}
+.tips footer {
+	font-size: .16rem;
+	color: #d00;
+	line-height: .39rem;
+	border-top: 1px solid #f1f1f1;
+	-webkit-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}

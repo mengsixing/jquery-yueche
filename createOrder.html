@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+<link rel="stylesheet" href="iconFont/style.css">
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="lCalendar/css/lCalendar.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/order.css">
+<title>立即下单</title>
+</head>
+<body>
+<!--头部-->
+<header id="header" role="heading">
+	<a class="back" href="javascript:history.go(-1);" title="">
+		<i class="am-icon-angle-left"></i>
+		<span>返回</span>
+	</a>
+	<h1 class="am-text-center">拼车信息填写</h1>
+</header>
+
+<form id="" name="" method="post" action="">
+	<!--主体-->
+	<main id="order" role="main">	<!--有优惠券时加样式：tick-->
+		<div class="main am-center">
+			<div class="box">
+				<div class="item">
+					<label class="am-fl" for="">称呼</label>
+					<input class="am-fr" type="text" id="" name="" placeholder="请输入称呼" value="王明礼" autocomplete="off">	<!--需获取-->
+					<div class="am-cf"></div>
+				</div>
+				<div class="item">
+					<label class="am-fl" for="">您的电话</label>
+					<input class="am-fr" type="tel" id="" name="" placeholder="请输入您的电话" value="1582236958" autocomplete="off">	<!--需获取-->
+					<div class="am-cf"></div>
+				</div>
+				<div class="item">
+					<label class="am-fl" for="">上车时间</label>
+					<input class="am-fr" type="text" id="timer" name="" value="2018-09-04 21:16" autocomplete="off" readonly>	<!--需获取-->
+					<div class="am-cf"></div>
+				</div>
+				<div class="item line">
+					<label class="am-fl" for="">路线</label>					
+					<span class="am-fl">
+						<i class="am-round"></i>
+					</span>
+					<div class="city am-fl" id="startCity">
+						成都	<!--需获取-->
+						<input type="hidden" id="" name="" value="成都">
+					</div>
+					<div class="switch am-text-center am-fl" data-start="成都" data-end="自贡" data-price="99" data-price2="88">	<!--需获取：成都->自贡，正向99，逆向88-->
+						<i class="icon-line-switch"></i>
+					</div>
+					<span class="danger am-fl">
+						<i class="am-round"></i>
+					</span>
+					<div class="city am-fl" id="endCity">
+						自贡	<!--需获取-->
+						<input type="hidden" id="" name="" value="自贡">
+					</div>
+					<div class="am-cf"></div>
+				</div>
+				<div class="item nav type">
+					<label class="am-fl" for="">服务类型</label>
+					<nav class="am-fl" role="navigation">
+						<a class="active" href="javascript:;" title="">拼车</a>
+						<a href="javascript:;" title="">包车</a>
+						<input type="hidden" id="" name="" value="拼车">
+					</nav>
+					<div class="am-cf"></div>
+				</div>
+				<div class="item select active" id="person">
+					<label class="am-fl" for="">人数</label>
+					<input class="am-fl" type="text" id="personText" name="" value="1人" autocomplete="off" readonly>
+					<input type="hidden" id="personNum" name="" value="1">	<!--人数-->
+					<span class="am-text-center am-fr" id="" data-status="0">	<!--状态：0表示未开启下拉，1表示开启下拉，下同-->
+						<i class="am-icon-angle-down"></i>	<!--开启状态样式：am-icon-angle-up-->
+					</span>
+					<div class="am-cf"></div>
+				</div>
+				<ul class="option person" role="list">	<!--下拉-->
+					<li data-value="1" role="listitem">1人</li>
+					<li data-value="2" role="listitem">2人</li>
+					<li data-value="3" role="listitem">3人</li>
+					<li data-value="4" role="listitem">4人</li>
+					<li data-value="5" role="listitem">5人</li>
+				</ul>
+				<div class="item select" id="car">
+					<label class="am-fl" for="">车辆数</label>
+					<input class="val am-fl" type="text" id="carText" name="" value="1辆" autocomplete="off" readonly>
+					<input class="num" type="hidden" id="carNum" name="" value="1">	<!--车辆数-->
+					<span class="am-text-center am-fr" id="" data-status="0">
+						<i class="am-icon-angle-down"></i>
+					</span>
+					<div class="am-cf"></div>
+				</div>
+				<ul class="option car" role="list">	<!--下拉-->
+					<li data-value="1" role="listitem">1辆</li>
+					<li data-value="2" role="listitem">2辆</li>
+					<li data-value="3" role="listitem">3辆</li>
+					<li data-value="4" role="listitem">4辆</li>
+					<li data-value="5" role="listitem">5辆</li>
+				</ul>
+				<div class="item nav child">
+					<label class="am-fl" for="">带有儿童</label>
+					<nav class="am-fl" role="navigation">
+						<a class="active" href="javascript:;" title="">无</a>
+						<a href="javascript:;" title="">有</a>
+						<input type="hidden" id="" name="" value="无">
+					</nav>
+					<div class="am-cf"></div>
+				</div>
+			</div>
+			<div class="price am-center am-text-center">
+				<div class="pay">约 <span></span> 元</div>	<!--span，需传值，默认：单人，99-->
+				<div class="ticket">券已抵 <span>5</span> 元</div>	<!--span，需传值，假定：5！若为：0时不显示此行，已设置-->
+				<input type="hidden" id="price" name="" value="99">	<!--单人拼车费，需传值，默认：99-->
+				<input type="hidden" id="pay" name="">	<!--支付车费-->
+			</div>
+		</div>		
+	</main>
+	
+	<!--底部-->
+	<footer id="footer" class="" role="contentinfo">	<!--有提示时加样式：num或time-->
+		<div class="footer">
+			<div class="num am-text-center">当前订单：人数>=4人，您已：<span>包车</span></div>
+			<div class="time am-text-center">时间：22:00~06:00为包车时段，您已：<span>包车</span></div>
+			<p class="am-center">
+				<button id="confirmCallCar" class="am-btn am-btn-block am-btn-danger" id="submit" type="button">确认呼叫快车</button>	<!--type的值为submit，为显示弹窗效果改为button-->
+			</p>
+		</div>
+	</footer>
+</form>
+
+<!--提示-->
+<div id="tips" role="contentinfo">
+	<div class="tipBox">
+		<div class="tips am-text-center">
+			<header role="heading">
+				<i class="am-icon-spin am-icon-spinner"></i>
+				<div>系统正在为您派单，请稍候</div>
+			</header>
+			<main role="main">接单成功后短信通知</main>
+			<footer role="contentinfo">取消</footer>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="lCalendar/js/lCalendar.min.js"></script>
+<script src="js/order.js"></script>
+<script>
+	$(function(){
+		$('#confirmCallCar').click(function(){
+			location.href="index_waiting.html";
+		});
+	});
+	</script>
+</body>
+</html>

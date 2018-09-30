@@ -1,0 +1,79 @@
+/*
+for：公用
+date：2018-08
+*/
+/* CSS Document */
+html {
+	/*font-family: 'Microsoft YaHei', '微软雅黑';*/
+	font-size: 483.0917874396135%;
+}
+@media screen and (min-width: 360px) {
+	html {
+		font-size: 543.4782608695652%;
+	}
+}
+@media screen and (min-width: 375px) {
+	html {
+		font-size: 566.1231884057971%;
+	}
+}
+@media screen and (min-width: 414px) {
+	html {
+		font-size: 625%;
+	}
+}
+
+/*
+结构
+*/
+header,
+main,
+footer {
+	display: table;
+	font-size: 0;
+}
+
+/*
+列表
+*/
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+/*
+表单
+*/
+label {
+	font-weight: 400;
+}
+input,
+textarea {
+	outline: 0;
+	padding: 0;
+}
+input,
+textarea,
+form p {
+	margin: 0;
+}
+
+/*
+AmazeUI
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+}
+.am-btn {
+	padding: 0;
+}
+.am-btn:active:focus,
+.am-btn:focus {
+	outline: 0;
+}

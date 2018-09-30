@@ -1,0 +1,66 @@
+/*
+for：会员-我的信息
+date：2018-09
+*/
+/* CSS Document */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+/*
+主体
+*/
+main {
+	width: 100%;
+	margin: .52rem 0 .15rem;
+}
+ul {
+	width: 93%;
+}
+li {
+	width: 100%;
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	background-color: #fff;
+	display: table;
+	margin-top: .15rem;
+	float: left;
+}
+.title,
+.brief {
+	text-align: justify;
+}
+.title {
+	font-size: .16rem;
+	color: #333;
+	line-height: .25rem;
+	padding: .15rem .2rem .08rem;
+}
+.brief,
+.tool {
+	font-size: .12rem;
+	line-height: .2rem;
+}
+.brief {
+	color: #757575;
+	padding: 0 .2rem .08rem;
+	margin-top: -.05rem;
+}
+.tool {
+	border-top: 1px solid #f1f1f1;
+	padding: .08rem .2rem .15rem;
+}
+.time {
+	color: #333;
+}
+.view {
+	color: #757575;
+}
+.img img {
+	width: 100%;
+	border-top-left-radius: .03rem;
+	border-top-right-radius: .03rem;
+}

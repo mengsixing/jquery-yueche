@@ -1,0 +1,86 @@
+/*
+for：会员-优程司机招募
+date：2018-09
+*/
+/* CSS Document */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+/*
+主体
+*/
+main {
+	width: 100%;
+	margin-top: .67rem;
+}
+.box {
+	width: 93%;
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	background-color: #fff;
+	display: table;
+	margin-bottom: .15rem;
+}
+.pic {
+	font-size: 0;
+	position: relative;
+}
+.img,
+.fixed {
+	width: 100%;
+	border-top-left-radius: .03rem;
+	border-top-right-radius: .03rem;
+}
+.fixed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+}
+.logo {
+	position: absolute;
+	top: .11rem;
+	left: .13rem;
+	z-index: 2;
+	width: 1.1rem;
+}
+.tip {
+	font-size: .14rem;
+	color: #757575;
+	line-height: .23rem;
+	margin-top: .15rem;
+}
+.pic h1,
+.pic h2 {
+	position: absolute;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	font-weight: normal;
+}
+.pic h1 {
+	top: 35%;
+	font-size: .21rem;
+	color: #fff;
+}
+.pic h2 {
+	top: 52%;
+	font-size: .14rem;
+	color: rgba(255,255,255,.5);
+}
+.tel {
+	font-size: .14rem;
+	color: #333;
+	margin-top: .1rem;
+	margin-bottom: .15rem;
+}
+.tel strong {
+	font-size: .25rem;
+	color: #d00;
+}

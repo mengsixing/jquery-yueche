@@ -1,0 +1,68 @@
+/*
+for：会员-我的优惠券
+date：2018-09
+*/
+/* CSS Document */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+/*
+主体
+*/
+main {
+	width: 100%;
+	margin: .37rem 0 .15rem;
+}
+.box {
+	width: 93%;
+}
+ul {
+	width: 100%;
+	margin-bottom: .15rem;
+}
+li {
+	width: 100%;
+	height: .75rem;
+	padding: 0 .13rem;	
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	background-color: #fff;
+	margin-top: .15rem;
+	float: left;
+}
+li.expired {	/*已过期*/
+	background: #fff url(../images/userCouponBg.jpg) no-repeat 68% bottom;
+	background-size: auto .75rem;
+}
+li i {
+	width: .4rem;
+	font-size: .27rem;
+	color: #d00;
+	margin-top: .15rem;
+}
+li i.icon-coupon-offer:before {
+	color: #d00;
+}
+li .content {
+	font-size: .14rem;
+	color: #757575;
+	line-height: .23rem;
+	margin-top: .15rem;
+}
+li .content div {
+	color: #333;
+}
+li .value {
+	font-size: .14rem;
+	color: #333;
+	margin-top: .15rem;
+}
+li .value span {
+	font-size: .24rem;
+	color: #d00;
+	margin-right: .05rem;
+}

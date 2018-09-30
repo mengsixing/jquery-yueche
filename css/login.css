@@ -1,0 +1,200 @@
+/*
+for：登录
+date：2018-08
+*/
+/* CSS Document */
+html,
+body {
+	height: 100%;
+}
+body {
+	position: relative;
+}
+
+/*
+主体
+*/
+/*头部*/
+header {
+	width: 93%;
+	padding-top: .09rem;
+}
+header a {
+	font-size: .14rem;
+	line-height: .3rem;
+}
+header a,
+header a:focus,
+header a:hover {
+	color: #d00;
+}
+/*主体*/
+main {
+	width: 100%;
+}
+.logo {
+	width: 1rem;
+	margin-bottom: .27rem;
+}
+.logo img {
+	width: 100%;
+}
+form {
+	width: 93%;
+}
+.am-form-group {
+	height: .47rem;
+	overflow: hidden;
+	font-size: .14rem;
+	color: #333;
+	line-height: .47rem;
+	border-bottom: 1px solid #f1f1f1;
+	margin-bottom: .13rem;
+}
+.am-form-group label {
+	/*width: 23%;*/
+	width: .88rem;
+}
+.am-form-group input {
+	/*width: 67%;*/
+	width: calc(100% - 1.25rem);
+	border-width: 0;
+	font-size: .14rem;
+	color: #333;
+	line-height: .47rem;
+}
+.am-form-group span {
+	width: .24rem;
+	cursor: pointer;
+}
+.am-form-group span i {
+	font-size: .24rem;
+	color: #ccc;
+}
+.am-form-group span .am-icon-angle-up,
+.am-form-group span .am-icon-angle-down {
+	font-size: .3rem;
+}
+.am-form-group span .icon-eye-slash {
+	line-height: 2em;
+}
+.am-form-group span .am-icon-eye {
+	color: #d00;
+}
+.userName {
+	max-height: 1.88rem;
+	overflow-y: scroll;
+	margin: -.13rem 0 .13rem;
+	display: none;
+}
+.userName li {
+	/*width: 77%;
+	margin-left: 23%;*/
+	width: calc(100% - .88rem);
+	margin-left: .88rem;
+	height: .47rem;
+	overflow: hidden;
+	font-size: .14rem;
+	color: #333;
+	line-height: .47rem;
+	border-bottom: 1px solid #f1f1f1;
+	cursor: pointer;
+}
+.userName li:hover,
+.userName li:active {
+	color: #d00;
+	border-color: #d00;
+}
+.am-btn-danger {
+	background-color: #eb6666;
+	border-color: #eb6666;
+	font-size: .16rem;
+	color: #fff;
+	line-height: .5rem;
+	border-radius: .1rem;
+}
+.am-btn-danger:focus,
+.am-btn-danger:hover {
+	background-color: #d00;
+	border-color: #d00;
+}
+.link {
+	width: 93%;
+}
+.link a {
+	font-size: .14rem;
+	color: #d00;
+	line-height: .4rem;
+}
+/*底部*/
+footer {
+	position: absolute;
+	left: 0;
+	bottom: .24rem;
+	z-index: 1;
+	width: 100%;
+}
+footer a {
+	width: 2.07rem;
+	height: .4rem;
+	background-color: #f1f1f1;
+	font-size: .16rem;
+	line-height: .4rem;
+	border-radius: 200px;
+}
+footer a,
+footer a:focus,
+footer a:hover {
+    color: #333;
+}
+footer a i {
+	width: .3rem;
+	height: .3rem;
+	font-size: .2rem;
+	color: #fff;
+	line-height: .3rem;
+	background-color: #20b920;
+	border-radius: 200px;
+	position: relative;
+	left: -.13rem;
+}
+
+/*
+更多
+*/
+.am-modal-actions {
+	font-size: .16rem;
+}
+.am-modal-actions-group {
+	margin: .05rem 0;
+}
+.am-modal-actions-group ul {
+	font-size: .14rem;
+}
+.am-modal-actions-group li {
+	height: .4rem;
+	line-height: .4rem;
+	background-color: #fff;
+	border-bottom: 1px solid #f1f1f1;
+}
+.am-modal-actions-group li,
+.am-modal-actions-group li a,
+.am-modal-actions-group li a:focus,
+.am-modal-actions-group li a:hover {
+	color: #333;
+}
+.am-modal-actions-group li.wechat,
+.am-modal-actions-group li.wechat a,
+.am-modal-actions-group li.wechat a:focus,
+.am-modal-actions-group li.wechat a:hover {
+	color: #20b920;
+}
+.am-modal-actions-group li a {
+	display: block;
+}
+.am-modal-actions-group .am-btn {
+	background-color: #d00;
+	color: #fff;
+	font-size: .16rem;
+	height: .4rem;
+}

@@ -1,0 +1,138 @@
+/*
+for：订单评价
+date：2018-09
+*/
+/* CSS Document */
+#evaluate {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 21;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform .3s;
+	transition: transform .3s;
+}
+#evaluate.active {
+	-webkit-transform: none;
+	transform: none;
+}
+.evaluateBox {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.evaluate {
+	position: absolute;
+	top: 50%;
+	left: 3.5%;
+	width: 93%;
+	background-color: #fff;
+	border-radius: .03rem;
+	display: table;
+}
+/*uFace*/
+.uFace {
+	width: .4rem;
+	height: .4rem;
+	margin-top: .22rem;
+	background-color: #f1f1f1;
+	font-size: 0;
+	position: relative;
+}
+.uFace i {
+	font-size: .25rem;
+	color: #ddd;
+	line-height: .4rem;
+}
+.uFace img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+/*uInfo*/
+.uInfo {
+	margin-top: .05rem;
+	font-size: 0;
+}
+.uInfo div {
+	font-size: .12rem;
+	color: #757575;
+	line-height: .22rem;
+}
+.uInfo span {
+	font-size: .16rem;
+	color: #333;
+	line-height: .26rem;
+}
+/*uStar*/
+.uStar {
+	margin-top: .05rem;
+	font-size: 0;
+}
+.uStar i {
+	font-size: .23rem;
+	color: #ff9815;
+	margin: 0 .03rem;
+}
+/*star*/
+.star {
+	width: 2.23rem;
+	margin-top: .14rem;
+	border-top: 1px solid #f1f1f1;
+	font-size: 0;
+}
+.star i {
+	font-size: .37rem;
+	color: #ccc;
+	margin: 0 .04rem;
+	cursor: pointer;
+}
+.star i.active {
+	color: #ff9815;
+}
+/*fTip*/
+.fTip {
+	font-size: .14rem;
+	color: #757575;
+	line-height: .28rem;
+	padding-bottom: .03rem;
+}
+/*checkbox*/
+.checkbox {
+	width: 80%;
+	margin-top: .04rem;
+	font-size: 0;
+}
+.checkbox div {
+	font-size: .14rem;
+	color: #333;
+	line-height: .34rem;
+	border: 1px solid #ddd;
+	display: inline-block;
+	padding: 0 .18rem;
+	-webkit-user-select: none;
+	user-select: none;
+	margin: .1rem .05rem 0;
+	cursor: pointer;
+}
+.checkbox div.active {
+	background-color: #5eb95e;
+	border-color: #5eb95e;
+	color: #fff;
+}
+.checkbox input {
+	display: none;
+}
+/*fButton*/
+.fButton {
+	margin-top: .19rem;
+	font-size: 0;
+	padding-bottom: .3rem;
+}

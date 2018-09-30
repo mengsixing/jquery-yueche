@@ -1,0 +1,70 @@
+/*
+for：会员-个人设置-修改
+date：2018-09
+*/
+/* CSS Document */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+/*
+主体
+*/
+main {
+	width: 100%;
+	margin-top: .67rem;
+}
+/*box*/
+.box {
+	width: 93%;
+	height: .57rem;
+	overflow: hidden;
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	background-color: #fff;
+	display: table;
+	padding: 0 .2rem;
+}
+.box i {
+	font-size: .3rem;
+	color: #ccc;
+	line-height: .56rem;
+}
+.icon {
+	width: .3rem;
+}
+.am-icon-mobile {
+	font-size: .4rem;
+}
+.am-icon-angle-right {
+	position: relative;
+	top: -.02rem;
+}
+input {
+	width: calc(100% - .58rem);
+	border-width: 0;
+	font-size: .16rem;
+	color: #333;
+	line-height: .56rem;
+}
+/*button*/
+.button {
+	width: 93%;
+	padding: .15rem 0;
+}
+.am-btn-danger {
+	background-color: #eb6666;
+	border-color: #eb6666;
+	font-size: .16rem;
+	color: #fff;
+	line-height: .5rem;
+	border-radius: .1rem;
+}
+.am-btn-danger:focus,
+.am-btn-danger:hover {
+	background-color: #d00;
+	border-color: #d00;
+}

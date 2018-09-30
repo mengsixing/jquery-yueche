@@ -1,0 +1,57 @@
+/*
+date：2018-09
+*/
+/* CSS Document */
+/*示例：使用时请删除*/
+main {
+	width: 100%;
+	margin-top: .2366666666666667rem;
+}
+ul {
+	width: 94%;
+}
+li {
+	width: 100%;
+	height: .57rem;
+	border-bottom: 1px solid #dfdfdf;
+	overflow: hidden;
+}
+li div {
+	font-size: .16rem;
+	line-height: .57rem;
+}
+li .am-fl {
+	color: #000;
+}
+li .am-fr {
+	color: #333;
+}
+
+/*列表加载*/
+#loading {
+	width: 100%;
+	font-size: .14rem;
+	color: #757575;
+	display: table;
+	padding: .2rem 0;
+}
+
+/*全屏加载*/
+#my-modal-loading {
+	display: block;
+	font-size: .14rem;
+	color: #757575;
+	background-color: rgba(0,0,0,.5);
+}
+#my-modal-loading .am-modal-dialog {
+	width: 80%;
+	background-color: #fff;
+	border-radius: .03rem;
+}
+#my-modal-loading .am-modal-hd,
+#my-modal-loading .am-icon-spin {
+    font-size: inherit;
+}
+#my-modal-loading .am-modal-hd {
+	padding: .15rem .1rem .05rem .1rem;
+}

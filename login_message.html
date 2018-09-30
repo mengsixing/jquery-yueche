@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+<link rel="stylesheet" href="iconFont/style.css">
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="css/SMSLogin.css">
+<title>短信验证码登录</title>
+</head>
+<body>
+<!--头部-->
+<header class="am-center" role="heading">
+	<a href="javascript:history.go(-1);" title="">
+		<i class="am-icon-angle-left"></i>
+		<span>返回</span>
+	</a>
+</header>
+<!--主体-->
+<main role="main">
+	<h1 class="am-text-center">短信验证码登录</h1>
+	<form class="am-center" method="post" action="login_message_verification.html" role="form">
+		<div class="am-form-group">
+			<label class="am-fl" for="username">手机号归属地</label>
+			<div class="tip am-fl">中国大陆</div>
+			<span class="am-text-center am-fr" id="userStatus" data-status="0">
+				<i class="am-icon-angle-right"></i>
+			</span>
+			<div class="am-cf"></div>
+		</div>
+		<div class="am-form-group">
+			<label class="am-fl" for="tel">+86</label>
+			<input class="am-fr" type="tel" id="tel" name="" maxlength="11" placeholder="请输入您的手机号" autocomplete="off">
+			<div class="am-cf"></div>
+		</div>
+		<p><button type="submit" class="am-btn am-btn-block am-btn-danger">获取验证码</button></p>
+	</form>
+</main>
+</body>
+</html>

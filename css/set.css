@@ -1,0 +1,129 @@
+/*
+for：会员-个人设置
+date：2018-09
+*/
+/* CSS Document */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+/*
+主体
+*/
+main {
+	width: 100%;
+	margin-top: .67rem;
+}
+/*uFace*/
+.uFace {
+	width: .86rem;
+	height: .86rem;
+	background-color: #ddd;
+	position: relative;
+}
+.uFace i {
+	font-size: .6rem;
+	color: #ccc;
+	line-height: .86rem;
+}
+.uFace img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+}
+/*tel*/
+.tel {
+	font-size: .2rem;
+	color: #333;
+}
+/*box*/
+.box {
+	width: 93%;
+}
+ul {
+	width: 100%;
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	background-color: #fff;
+	display: table;
+	margin-top: .15rem;
+}
+li {
+	width: 100%;
+	height: .56rem;
+	overflow: hidden;
+	padding: 0 .2rem;
+	font-size: 0;
+	border-bottom: 1px solid #f1f1f1;
+	float: left;
+}
+li:last-child {
+	border-bottom-width: 0;
+}
+li i {
+	font-size: .3rem;
+	color: #ccc;
+	line-height: .56rem;
+}
+li .icon {
+	width: .26rem;
+	margin: 0;	
+}
+.am-icon-mobile {
+	font-size: .4rem;
+}
+.am-icon-lock {
+	font-size: .32rem;
+}
+.icon-authentication-u {
+	position: relative;
+	top: .13rem;
+}
+.am-icon-wechat {
+	font-size: .25rem;
+}
+.icon-cancel {
+	font-size: .25rem;
+	position: relative;
+	top: .15rem;
+}
+li .name {
+	font-size: .16rem;
+	color: #333;
+	line-height: .56rem;
+	margin-left: .2rem;
+}
+li .tip div {
+	font-size: .14rem;
+	color: #757575;
+	line-height: .56rem;
+	margin-right: .2rem;
+	position: relative;
+}
+li .tip i {
+	line-height: .52rem;
+}
+/*button*/
+.button {
+	width: 93%;
+	padding: .15rem 0;
+}
+.am-btn-danger {
+	background-color: #eb6666;
+	border-color: #eb6666;
+	font-size: .16rem;
+	color: #fff;
+	line-height: .5rem;
+	border-radius: .1rem;
+}
+.am-btn-danger:focus,
+.am-btn-danger:hover {
+	background-color: #d00;
+	border-color: #d00;
+}

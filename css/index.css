@@ -1,0 +1,356 @@
+/*
+for：业务首页
+date：2018-09
+*/
+/* CSS Document */
+main {	
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+/*
+重新定位
+*/
+main .location {
+	width: 93%;
+}
+.location div {
+	width: .3rem;
+	height: .3rem;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	border-radius: 200px;
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	cursor: pointer;
+}
+.location div i {
+	font-size: .2rem;
+	color: #ccc;
+	line-height: .3rem;
+	/*position: relative;
+	top: -.01rem;*/
+}
+
+/*
+选择线路
+*/
+main .line {
+	width: 93%;
+	padding: .18rem 0 .26rem;
+	display: table;
+	background-color: #fff;
+	box-shadow: .03rem .03rem .03rem rgba(51,51,51,.1), -.03rem -.03rem .03rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	margin-top: .1rem;
+}
+/*TAB*/
+.line nav {
+	font-size: 0;
+	text-align: center;
+}
+.line nav a {
+	font-size: .14rem;
+	color: #757575;
+	line-height: .34rem;
+	border: 1px solid #fff;
+	border-radius: 200px;
+	display: inline-block;
+	margin: 0 .03rem;
+	padding: 0 .14rem;
+}
+.line nav a.active {
+	color: #333;
+	border-color: #ddd;
+}
+.line .main {
+	width: 94%;
+	margin-top: .07rem;
+}
+/*selectTime*/
+.line .select {
+	width: .85rem;
+	margin-top: .15rem;
+	display: none;
+}
+.line .select.show {
+	display: block;
+}
+.line .select.active {
+	width: 1.35rem;
+}
+.line .select .am-fl {
+	width: .25rem;
+}
+.line .select .am-fr {
+	width: .6rem;
+}
+.line .select.active .am-fr {
+	width: 1.1rem;
+}
+.line .select i,
+.line .select input {
+	line-height: .18rem;
+}
+.line .select i {
+	font-size: .18rem;
+	color: #ccc;
+}
+.line .select input {
+	border: 0;
+	width: 100%;
+	font-size: .14rem;
+	color: #333;
+}
+/*form*/
+.line .main .form {
+	width: 100%;
+	position: relative;
+	display: table;
+}
+.line .main ul {
+	width: 100%;
+}
+.line .main li {
+	width: 50%;
+	height: .6rem;
+	overflow: hidden;
+	float: left;
+	position: relative;
+}
+.line .main li:first-child {
+	padding-right: .23rem;
+	padding-left: .2rem;
+}
+.line .main li:last-child {
+	padding-left: .43rem;
+}
+.line .main li input {
+	width: 100%;
+	font-size: .16rem;
+	color: #333;
+	line-height: .6rem;
+	border-width: 0;
+	border-bottom: 1px solid #f1f1f1;
+	margin-top: -1px;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.line .main li div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: .2rem;
+	height: 100%;
+}
+.line .main li:last-child div {
+	left: .2rem;
+}
+.line .main li div i {
+	width: .1rem;
+	height: .1rem;
+	margin-top: .25rem;
+	background-color: #5eb95e;
+	display: block;
+	font-size: 0;
+}
+.line .main li:last-child div i {
+	background-color: #d00;
+}
+.line .main .switch {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: .46rem;
+	height: .6rem;
+	margin-left: -.23rem;
+	font-size: .2rem;
+	color: #ccc;
+	line-height: .6rem;
+	cursor: pointer;
+}
+/*price*/
+.line .price {
+	margin-top: .15rem;
+	display: none;
+}
+.line .price.active {
+	display: block;
+}
+.line .price .pay {
+	font-size: .16rem;
+	color: #333;
+}
+.line .price .pay span {
+	font-size: .28rem;
+	color: #d00;
+	font-weight: 600;
+}
+.line .price .ticket {
+	font-size: .12rem;
+	color: #757575;
+	margin-top: .03rem;
+	display: none;
+}
+.line .price .ticket.active {
+	display: block;
+}
+/*button*/
+main .button {
+	width: 93%;
+	margin-top: .15rem;
+	margin-bottom: .2rem;
+	display: none;
+}
+main .button.active {
+	display: block;
+}
+.am-btn-danger {
+	background-color: #eb6666;
+	border-color: #eb6666;
+	font-size: .16rem;
+	color: #fff;
+	line-height: .5rem;
+	border-radius: .1rem;
+}
+.am-btn-danger:focus,
+.am-btn-danger:hover {
+	background-color: #d00;
+	border-color: #d00;
+}
+
+/*
+热门线路
+*/
+main .hotline {
+	width: 93%;
+	padding: .18rem 0 .2rem;
+	background-color: #fff;
+	box-shadow: .03rem -.03rem .03rem rgba(51,51,51,.1), -.03rem 0 .03rem rgba(51,51,51,.1);
+	border-top-left-radius: .03rem;
+	border-top-right-radius: .03rem;
+	margin-top: .15rem;
+}
+main .hotline.active {
+	display: none;
+}
+/*标题*/
+.hotline .title {
+	width: 94%;
+	height: .3rem;
+	overflow: hidden;
+}
+.hotline .title h1,
+.hotline .title a {
+	line-height: .3rem;
+}
+.hotline .title h1 {
+	font-size: .16rem;
+	color: #333;
+	font-weight: normal;
+}
+.hotline .title h1 i {
+	width: .3rem;
+	height: .3rem;
+	border-radius: 200px;
+	background-color: #f5f5f5;
+	color: #757575;
+	margin-right: .02rem;
+}
+.hotline .title a {
+	font-size: .12rem;
+	color: #757575;
+}
+/*列表*/
+.hotline .list {
+	width: 94%;
+	margin-top: .04rem;
+}
+.hotline .list ul {
+	margin: 0 -.03rem;
+}
+.hotline .list li {
+	width: 33.33333333333333%;
+	font-size: .12rem;
+	margin-top: .09rem;
+	padding: 0 .03rem;
+	float: left;
+}
+.hotline .list li a {
+	width: 100%;
+	color: #757575;
+	line-height: .31rem;
+	display: block;
+	border: 1px solid #ddd;
+	border-radius: 200px;
+}
+.hotline .list li a i {
+	color: #ccc;
+}
+
+/*
+全部线路
+*/
+#line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 32;
+	width: 100%;
+	height: 100%;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform .3s;
+	transition: transform .3s;
+}
+#line.active {
+	-webkit-transform: none;
+	transform: none;
+}
+#line .fixed {
+	width: 100%;
+	height: .8rem;
+}
+#line main {
+	width: 100%;
+	height: calc(100% - .8rem);
+	background-color: rgba(0, 0, 0, .5);
+	padding-top: .12rem;
+}
+#line .box {
+	width: 93%;
+	height: 100%;
+	background-color: #fff;
+	border-top-right-radius: .03rem;
+	border-top-left-radius: .03rem;
+	overflow: hidden;
+	overflow-y: auto;
+}
+#line li {
+	width: 100%;
+	font-size: .16rem;
+	color: #333;
+	line-height: .52rem;
+	border-bottom: 1px solid #ddd;
+	padding: 0 .3rem 0 .25rem;
+	float: left;
+	cursor: pointer;
+}
+#line li:last-child {
+	border-bottom-width: 0;
+}
+#line li i {
+	color: #ccc;
+	padding: 0 .05rem;
+}
+#line li span {
+	font-size: .12rem;
+	color: #fff;
+	line-height: .14rem;
+	padding: 0 .05rem;
+	background-color: #d00;
+	border-radius: .03rem;
+	margin-left: .1rem;
+}

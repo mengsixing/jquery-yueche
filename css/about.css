@@ -1,0 +1,49 @@
+/*
+for：会员-关于我们、法律条款
+date：2018-09
+*/
+/* CSS Document */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+/*
+主体
+*/
+main {
+	width: 100%;
+	margin-top: .67rem;
+}
+.box {
+	width: 93%;
+}
+ul {
+	width: 100%;
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	background-color: #fff;
+	display: table;
+	margin-bottom: .15rem;
+}
+li {
+	width: 100%;
+	padding: 0 .2rem;
+	font-size: .16rem;
+	line-height: .5rem;
+	border-bottom: 1px solid #f1f1f1;
+	float: left;
+}
+li:last-child {
+	border-bottom-width: 0;
+}
+li div {
+	width: 3.2rem;
+	color: #333;
+}
+li i {
+	font-size: .3rem;
+	color: #ccc;
+}

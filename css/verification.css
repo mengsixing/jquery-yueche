@@ -1,0 +1,77 @@
+/*
+for：请输入验证码
+date：2018-08
+*/
+/* CSS Document */
+/*头部*/
+header {
+	width: 93%;
+	padding-top: .09rem;
+}
+header a {
+	font-size: .14rem;
+	line-height: .3rem;
+}
+header a,
+header a:focus,
+header a:hover {
+	color: #333;
+}
+header a i {
+	font-size: .3rem;
+	line-height: .3rem;
+}
+header a i,
+header a:focus i,
+header a:hover i {
+	color: #ccc;
+}
+header a span {
+	position: relative;
+	top: -.05rem;
+}
+/*主体*/
+main {
+	width: 100%;
+	margin-top: .32rem;
+}
+h1 {
+	font-size: .3rem;
+	color: #333;
+	line-height: .58rem;
+}
+p {
+	width: 73%;
+	font-size: .14rem;
+	color: #757575;
+	line-height: 1.5em;
+	margin: 0;
+}
+p span {
+	font-size: .19rem;
+	color: #333;
+	margin: 0 .3em;
+}
+form {
+	margin-top: .24rem;
+}
+form input {
+	width: .57rem;
+	margin: 0 .05rem;
+	font-size: .4rem;
+	color: #333;
+	line-height: 1.01rem;
+	border: 0;
+	border-bottom: .02rem solid #f1f1f1;
+}
+form input:hover,
+form input:focus,
+form input.active {
+	border-color: #d00;
+}
+div {
+	font-size: .14rem;
+	color: #757575;
+	line-height: .23rem;
+	margin-top: .48rem;
+}

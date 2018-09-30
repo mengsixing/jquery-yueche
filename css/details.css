@@ -1,0 +1,61 @@
+/*
+for：会员-信息详情
+date：2018-09
+*/
+/* CSS Document */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+/*
+主体
+*/
+main {
+	width: 100%;
+	margin-top: .67rem;
+}
+.box {
+	width: 93%;
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	background-color: #fff;
+	display: table;
+	margin-bottom: .15rem;
+}
+.title {
+	padding: 0 3.5%;
+	font-size: .16rem;
+	color: #333;
+	line-height: .24rem;
+	font-weight: normal;
+	margin-top: .12rem;
+	text-align: justify;
+}
+.info {
+	padding: 0 3.5% .09rem;
+	font-size: .12rem;
+	color: #ccc;
+	line-height: .23rem;
+	border-bottom: 1px solid #f1f1f1;
+}
+article {
+	padding: .11rem 3.5% .2rem;
+	font-size: .14rem;
+	color: #757575;
+	line-height: .23rem;
+	text-align: justify;
+}
+article p {
+	margin: .23rem 0 0 0;
+}
+article p:first-child {
+	margin-top: 0;
+}
+article img {
+	max-width: 107%;
+	margin: 0 -3.5%;
+	text-align: center;
+}

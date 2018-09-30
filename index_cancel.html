@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+<link rel="stylesheet" href="iconFont/style.css">
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/cancel.css">
+<title>退款</title>
+</head>
+<body>
+<!--头部-->
+<header id="header" role="heading">
+	<a class="back" href="javascript:history.go(-1);" title="">
+		<i class="am-icon-angle-left"></i>
+		<span>返回</span>
+	</a>
+	<h1 class="am-text-center">退款</h1>
+</header>
+
+<!--主体-->
+<main id="cancel" role="main">
+	<form id="" name="" method="post" acction="">
+		<div class="box am-center">
+			<label for="">退款理由</label>
+			<div class="select">
+				<input type="text" id="reason" name="" placeholder="请选择退款理由" autocomplete="off" readonly>				
+				<span class="am-text-center am-fr" id="" data-status="0">	<!--状态：0表示未开启下拉，1表示开启下拉-->
+					<i class="am-icon-angle-down"></i>	<!--开启状态样式：am-icon-angle-up-->
+				</span>
+				<ul role="list">
+					<li data-value="1" role="listitem">司机与平台派送司机不符</li>
+					<li data-value="2" role="listitem">司机与平台派送司机不符2</li>
+					<li data-value="3" role="listitem">司机与平台派送司机不符3</li>
+					<li data-value="4" role="listitem">司机与平台派送司机不符4</li>
+					<li data-value="5" role="listitem">司机与平台派送司机不符5</li>
+					<li data-value="6" role="listitem">司机与平台派送司机不符6</li>
+					<li data-value="7" role="listitem">司机与平台派送司机不符7</li>
+				</ul>
+				<input type="hidden" id="" name="" value="0">	<!--退款理由ID-->
+			</div>
+			<label for="">补充说明</label>
+			<textarea id="" name=""></textarea>
+			<label for="">照片</label>
+			<div class="photo">
+				<div class="img am-fl"><img src="images/p1.jpg" alt=""></div>
+				<div class="img am-fl"><img src="images/p2.jpg" alt=""></div>
+				<div class="plus am-fl am-text-center">
+					<i class="icon-plus"></i>
+					<input type="file" id="" name="">
+				</div>
+				<div class="am-cf"></div>
+			</div>
+		</div>
+		<div class="button am-center">
+			<button type="button" class="am-btn am-btn-block am-btn-danger">提交退款申请</button>	<!--type的值为submit，为显示弹窗效果改为button-->
+		</div>
+	</form>
+</main>
+
+<!--提示-->
+<div id="tips" role="contentinfo">
+	<div class="tipBox">
+		<div class="tips am-text-center">
+			<header role="heading">请等待</header>
+			<main role="main">您的退款需求已经提交成功，<br>我们会在48小时内审核并反馈！</main>
+			<footer role="contentinfo">完成</footer>
+		</div>
+	</div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/cancel.js"></script>
+</body>
+</html>

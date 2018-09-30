@@ -1,0 +1,48 @@
+/*
+for：会员-意见反馈
+date：2018-09
+*/
+/* CSS Document */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 11;
+}
+
+/*
+主体
+*/
+main {
+	width: 100%;
+	margin-top: .67rem;
+}
+textarea {
+	width: 93%;
+	height: 1.8rem;
+	box-shadow: .02rem .02rem .02rem rgba(51,51,51,.1), -.02rem -.02rem .02rem rgba(51,51,51,.1);
+	border-radius: .03rem;
+	background-color: #fff;
+	font-size: .14rem;
+	color: #333;
+	line-height: .2rem;
+	padding: .1rem;
+	border-width: 0;
+}
+button {
+	margin: .15rem 0;
+}
+.am-btn-danger {
+	width: 93%;
+	background-color: #eb6666;
+	border-color: #eb6666;
+	font-size: .16rem;
+	color: #fff;
+	line-height: .5rem;
+	border-radius: .1rem;
+}
+.am-btn-danger:focus,
+.am-btn-danger:hover {
+	background-color: #d00;
+	border-color: #d00;
+}

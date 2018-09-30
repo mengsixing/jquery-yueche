@@ -1,0 +1,182 @@
+/*
+for：等待上车
+date：2018-09
+*/
+/* CSS Document */
+/*
+主体
+*/
+main {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 11;
+	width: 100%;
+	background-color: #fff;
+}
+.box {
+	width: 93%;
+	min-height: .4rem;
+	position: relative;
+}
+.qrcode {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	width: .8rem;
+	height: .8rem;
+	background-color: #fff;
+	box-shadow: 0 .02rem .02rem rgba(51,51,51,.1);
+	margin: -.4rem 0 0 -.4rem;
+	cursor: pointer;
+}
+.qrcode img {
+	width: .54rem;
+	height: .54rem;
+	margin-top: .13rem;
+}
+/*信息*/
+.info {
+	width: 100%;
+	padding: .26rem 0 .13rem;
+	border-bottom: 1px solid #f1f1f1;
+}
+.driver {
+	width: 35%;
+}
+.faces {
+	width: .4rem;
+	height: .4rem;
+	background-color: #f1f1f1;
+	margin-right: .05rem;
+	position: relative;
+}
+.faces i {
+	font-size: .25rem;
+	color: #ccc;
+	line-height: .4rem;
+}
+.faces img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.tel {
+	width: calc(100% - .45rem);
+}
+.tel h1 {
+	font-size: .14rem;
+	color: #757575;
+	line-height: .25rem;
+	font-weight: normal;
+}
+.tel div {
+	font-size: .12rem;
+	color: #333;
+	line-height: .15rem;
+}
+.time {
+	width: 30%;
+}
+.time div {
+	font-size: .12rem;
+	color: #757575;
+	line-height: .19rem;
+	margin-top: .23rem;
+}
+.time p {
+	font-size: .16rem;
+	color: #333;
+	line-height: .25rem;
+	margin: 0;
+}
+.car {
+	width: 35%;
+	text-align: right;
+}
+.car div,
+.car p {
+	font-size: .14rem;
+	line-height: .2rem;
+}
+.car div {
+	color: #757575;
+}
+.car p {
+	color: #333;
+	margin: 0;
+}
+/*按钮*/
+.button {
+	width: 100%;
+	padding: .2rem 0 .25rem;
+}
+.am-btn-success,
+.am-btn-danger {
+	font-size: .16rem;
+	color: #fff;
+	line-height: .5rem;
+	padding: 0 .48rem;
+	margin: 0 .08rem;
+}
+.am-btn-success {
+	background-color: #9ed59e;
+	border-color: #9ed59e;
+}
+.am-btn-success:focus,
+.am-btn-success:hover {
+	background-color: #5eb95e;
+	border-color: #5eb95e;
+}
+.am-btn-danger {
+	background-color: #eb6666;
+	border-color: #eb6666;
+}
+.am-btn-danger:focus,
+.am-btn-danger:hover {
+	background-color: #d00;
+	border-color: #d00;
+}
+
+/*
+二维码
+*/
+#qrcode {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+	-webkit-transition: -webkit-transform .3s;
+	transition: transform .3s;
+}
+#qrcode.active {
+	-webkit-transform: none;
+	transform: none;
+}
+.qrcodeCode {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#qrcode .img {
+	position: absolute;
+	top: 50%;
+	left: 50%;	
+	width: 2.26rem;
+	height: 2.26rem;
+	background-color: #fff;
+	margin: -1.8rem 0 0 -1.13rem;
+}
+#qrcode img {
+	width: 1.56rem;
+	height: 1.56rem;
+	margin-top: .35rem;
+	vertical-align: baseline;
+}

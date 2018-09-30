@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="screen-orientation" content="portrait">
+<meta name="x5-orientation" content="portrait">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+<link rel="stylesheet" href="iconFont/style.css">
+<link rel="stylesheet" href="css/public.css">
+<link rel="stylesheet" href="css/login.css">
+<title>登录</title>
+</head>
+<body>
+<!--头部-->
+<header class="am-center" role="heading">
+	<a class="am-fr" href="javascript:;" title="" data-am-modal="{target:'#actions'}">更多</a>
+</header>
+<!--主体-->
+<main role="main">
+	<div class="logo am-center"><img src="images/loginLogo.jpg" alt=""></div>
+	<form class="am-center" method="post" action="" onSubmit="return false;" role="form">
+		<div class="am-form-group">
+			<label class="am-fl" for="username">账号</label>
+			<input class="am-fl" type="text" id="username" name="" placeholder="手机号/邮箱/优程会员名" autocomplete="off">
+			<span class="am-text-center am-fr" id="userStatus" data-status="0">	<!--状态：0表示未开启下拉，1表示开启下拉-->
+				<i class="am-icon-angle-down"></i>	<!--开启状态样式：am-icon-angle-up-->
+			</span>
+		<div class="am-cf"></div>
+		</div>
+		<ul class="userName" role="list">	<!--下拉-->
+			<li role="listitem">15892236958</li>
+			<li role="listitem">15348115224</li>
+			<li role="listitem">15892236958</li>
+			<li role="listitem">15348115224</li>
+			<li role="listitem">15892236958</li>
+			<li role="listitem">15348115224</li>
+		</ul>
+		<div class="am-form-group">
+			<label class="am-fl" for="password">密码</label>
+			<input class="am-fl" type="password" id="password" name="" placeholder="请输入登录密码" maxlength="16" autocomplete="off">
+			<span class="am-text-center am-fr" id="pwdStatus" data-status="0">	<!--状态：0表示闭眼，1表示开眼-->
+				<i class="icon-eye-slash"></i>	<!--开眼状态样式：am-icon-eye-->
+			</span>
+			<div class="am-cf"></div>
+		</div>
+		<p><button id="submitBtn" type="submit" class="am-btn am-btn-block am-btn-danger">登录</button></p>
+	</form>
+	<div class="link am-center">
+		<a class="am-fl" href="" title="">忘记密码?</a>
+		<a class="am-fr" href="Login_message.html" title="">短信验证码登录</a>
+	</div>
+</main>
+<!--底部-->
+<footer role="contentinfo">
+	<a class="am-center am-text-center" href="login_wechat.html" title="">
+		<i class="am-icon-wechat"></i>
+		微信账户快速登录
+	</a>
+</footer>
+
+<!--更多-->
+<div class="am-modal-actions" id="actions">
+	<div class="am-modal-actions-group">
+		<ul role="list">
+			<li role="listitem"><a href="" title="">新用户注册</a></li>
+			<li class="wechat" role="listitem">
+				<a href="" title="">
+					<i class="am-icon-wechat"></i>
+					微信快速登录
+				</a>
+			</li>
+			<li role="listitem"><a href="" title="">帮助</a></li>
+		</ul>
+	</div>
+	<div class="am-modal-actions-group">
+		<button class="am-btn am-btn-block" data-am-modal-close>取消</button>
+	</div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="AmazeUI/js/amazeui.min.js"></script>
+<script src="js/login.js"></script>
+<script>
+$(function(){
+	$('#submitBtn').click(function(){
+		location.href="index.html";
+	});
+});
+</script>
+</body>
+</html>
