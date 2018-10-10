@@ -1,485 +1,449 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="screen-orientation" content="portrait">
-<meta name="x5-orientation" content="portrait">
-<meta name="format-detection" content="telephone=no">
-<meta name="format-detection" content="email=no">
-<meta name="Keywords" content="">
-<meta name="Description" content="">
-<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
-<link rel="stylesheet" href="iconFont/style.css">
-<link rel="stylesheet" href="css/public.css">
-<link rel="stylesheet" href="lCalendar/css/lCalendar.css">
-<link rel="stylesheet" href="css/indexPublic.css">
-<link rel="stylesheet" href="css/index.css">
-<title>业务首页</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+	<link rel="stylesheet" href="iconFont/style.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="lCalendar/css/lCalendar.css">
+	<link rel="stylesheet" href="css/indexPublic.css">
+	<link rel="stylesheet" href="css/index.css">
+	<title>业务首页</title>
 </head>
+
 <body>
-<!--地图-->
-<div id="map"></div>
+	<!--地图-->
+	<div id="map"></div>
 
-<!--头部-->
-<header id="header" role="heading">
-	<div class="box am-center">
-		<!--工具条-->
-		<div class="tools">
-			<a class="icon user am-fl" href="javascript:;" title="">
-				<i class="am-icon-user"></i>
-				<span class="am-badge am-round"></span>	<!--有新信息时加上这行-->
-			</a>	<!--点击出现：会员中心-->
-			<div class="address am-center am-fl">
-				<div class="logo am-fl"></div>
-				<div class="select am-fr">
-					<span class="am-text-center am-fl">成都市</span>
-					<i class="am-icon-angle-down am-fr"></i>
-					<div class="am-cf"></div>
-				</div>	<!--点击出现：选择城市-->
-				<div class="am-cf"></div>
-			</div>
-			<div class="am-fr">
-				<a class="icon commenting" href="my_message.html" title="">
-					<i class="icon-commenting"></i>
-					<span class="am-badge am-round"></span>	<!--有新信息时加上这行-->
+	<!--头部-->
+	<header id="header" role="heading">
+		<div class="box am-center">
+			<!--工具条-->
+			<div class="tools">
+				<a class="icon user am-fl" href="javascript:;" title="">
+					<i class="am-icon-user"></i>
+					<span class="am-badge am-round"></span>
+					<!--有新信息时加上这行-->
 				</a>
-				<a class="icon scanQrcode" href="" title="">
-					<i class="icon-scan-qrcode"></i>
-				</a>
-			</div>
-		</div>
-	</div>
-	<!--导航栏-->
-	<div class="nav">
-		<nav class="am-center" role="navigation">
-			<ul id="nav" role="list" draggable="true">
-				<li class="active" role="listitem"><a href="javascript:;" title="">城际快车</a></li>
-				<li role="listitem"><a href="javascript:;" title="">顺风车</a></li>
-				<li role="listitem"><a href="javascript:;" title="">专车</a></li>
-				<li role="listitem"><a href="javascript:;" title="">政府大巴</a></li>
-				<li role="listitem"><a href="javascript:;" title="">小件货运</a></li>
-				<li role="listitem"><a href="javascript:;" title="">代驾</a></li>
-			</ul>
-			<i class="icon-more-o"></i>	<!--点击出现：全部服务-->
-		</nav>
-	</div>
-</header>
-
-<!--主体-->
-<main role="main">
-	<!--重新定位-->
-	<div class="location am-center">
-		<div class="am-text-center">
-			<i class="icon-location"></i>
-		</div>
-	</div>
-	<!--选择线路-->
-	<div class="line am-center">
-		<nav role="navigation am-text-center">
-			<a class="active" href="javascript:;" title="">现在</a>
-			<a href="javascript:;" title="">预约</a>
-		</nav>
-		<form id="" name="" method="post" action="createOrder.html" role="form">
-			<div class="main am-center">			
-				<div class="select am-center"><!--显示时，加样式show--><!--有值时，加样式active-->
-					<div class="am-fl">
-						<i class="icon-appointment"></i>
+				<!--点击出现：会员中心-->
+				<div class="address am-center am-fl">
+					<div class="logo am-fl"></div>
+					<div class="select am-fr">
+						<span class="am-text-center am-fl">成都市</span>
+						<i class="am-icon-angle-down am-fr"></i>
+						<div class="am-cf"></div>
 					</div>
-					<div class="am-fr">
-						<input class="am-text-center" type="text" id="timer" name="" readonly placeholder="预约时间" autocomplete="off">
-					</div>
+					<!--点击出现：选择城市-->
 					<div class="am-cf"></div>
 				</div>
-				<div class="form">
-					<ul role="list">
-						<li role="listitem">
-							<div>
-								<i class="am-badge am-round"></i>
-							</div>
-							<input type="text" id="startCity" name="" value="成都" readonly placeholder="您现在哪儿" autocomplete="off">	<!--请根据当前的坐标定位城市：成都-->
-						</li>
-						<li role="listitem">
-							<div>
-								<i class="am-badge am-round"></i>
-							</div>
-							<input type="text" id="endCity" name="" readonly placeholder="您要去哪儿" autocomplete="off">
-						</li>
-					</ul>
-					<div class="switch am-text-center">
-						<i class="icon-line-switch"></i>
-					</div>
-				</div>
-				<div class="price am-text-center">
-					<div class="pay">约 <span>0</span> 元</div>
-					<div class="ticket">券已抵 <span>0</span> 元</div>
-					<input type="hidden" id="pay" name="" value="0">	<!--车费-->
+				<div class="am-fr">
+					<a class="icon commenting" href="my_message.html" title="">
+						<i class="icon-commenting"></i>
+						<span class="am-badge am-round"></span>
+						<!--有新信息时加上这行-->
+					</a>
+					<a class="icon scanQrcode" href="" title="">
+						<i class="icon-scan-qrcode"></i>
+					</a>
 				</div>
 			</div>
+		</div>
+		<!--导航栏-->
+		<div class="nav">
+			<nav class="am-center" role="navigation">
+				<ul id="nav" role="list" draggable="true">
+					<li class="active" role="listitem"><a href="javascript:;" title="">城际快车</a></li>
+					<li role="listitem"><a href="javascript:;" title="">顺风车</a></li>
+					<li role="listitem"><a href="javascript:;" title="">专车</a></li>
+					<li role="listitem"><a href="javascript:;" title="">政府大巴</a></li>
+					<li role="listitem"><a href="javascript:;" title="">小件货运</a></li>
+					<li role="listitem"><a href="javascript:;" title="">代驾</a></li>
+				</ul>
+				<i class="icon-more-o"></i>
+				<!--点击出现：全部服务-->
+			</nav>
+		</div>
+	</header>
+
+	<!--主体-->
+	<main role="main">
+		<!--重新定位-->
+		<div class="location am-center">
+			<div class="am-text-center">
+				<i class="icon-location"></i>
+			</div>
+		</div>
+		<!--选择线路-->
+		<div class="line am-center">
+			<nav role="navigation am-text-center">
+				<a class="active" href="javascript:;" title="">现在</a>
+				<a href="javascript:;" title="">预约</a>
+			</nav>
+			<form id="" name="" method="post" action="createOrder.html" role="form">
+				<div class="main am-center">
+					<div class="select am-center">
+						<!--显示时，加样式show-->
+						<!--有值时，加样式active-->
+						<div class="am-fl">
+							<i class="icon-appointment"></i>
+						</div>
+						<div class="am-fr">
+							<input class="am-text-center" type="text" id="timer" name="" readonly placeholder="预约时间" autocomplete="off">
+						</div>
+						<div class="am-cf"></div>
+					</div>
+					<div class="form">
+						<ul role="list">
+							<li role="listitem">
+								<div>
+									<i class="am-badge am-round"></i>
+								</div>
+								<input type="text" id="startCity" name="" value="成都" readonly placeholder="您现在哪儿" autocomplete="off">
+								<!--请根据当前的坐标定位城市：成都-->
+							</li>
+							<li role="listitem">
+								<div>
+									<i class="am-badge am-round"></i>
+								</div>
+								<input type="text" id="endCity" name="" readonly placeholder="您要去哪儿" autocomplete="off">
+							</li>
+						</ul>
+						<div class="switch am-text-center">
+							<i class="icon-line-switch"></i>
+						</div>
+					</div>
+					<div class="price am-text-center">
+						<div class="pay">约 <span>0</span> 元</div>
+						<div class="ticket">券已抵 <span>0</span> 元</div>
+						<input type="hidden" id="pay" name="" value="0">
+						<!--车费-->
+					</div>
+				</div>
 		</div>
 		<div class="button am-center">
 			<button class="am-btn am-btn-block am-btn-danger" type="submit">立即下单</button>
 		</div>
-	</form>
-	<!--热门线路-->
-	<div class="hotline am-center">
-		<div class="title am-center">
-			<h1 class="am-fl">
-				<i class="am-icon-volume-up am-text-center"></i>
-				热门线路
-			</h1>
-			<a class="am-fr" href="javascript:;" title="">更多</a>	<!--点击出现：更多线路-->
-			<div class="am-cf"></div>
-		</div>
-		<div class="list am-center">			
-			<ul role="list">
-				<li role="listitem">
-					<a class="am-text-center" href="" title="">	<!--点击时：直接传参给3_order.html-->
-						宜宾
-						<i class="icon-line-switch"></i>
-						成都
-					</a>
-				</li>
-				<li role="listitem">
-					<a class="am-text-center" href="" title="">
-						成都
-						<i class="icon-line-switch"></i>
-						宜宾
-					</a>
-				</li>
-				<li role="listitem">
-					<a class="am-text-center" href="" title="">
-						成都
-						<i class="icon-line-switch"></i>
-						自贡
-					</a>
-				</li>
-				<li role="listitem">
-					<a class="am-text-center" href="" title="">
-						自贡
-						<i class="icon-line-switch"></i>
-						成都
-					</a>
-				</li>
-				<li role="listitem">
-					<a class="am-text-center" href="" title="">
-						自贡
-						<i class="icon-line-switch"></i>
-						攀枝花
-					</a>
-				</li>
-				<li role="listitem">
-					<a class="am-text-center" href="" title="">
-						成都
-						<i class="icon-line-switch"></i>
-						攀枝花
-					</a>
-				</li>
-			</ul>
-			<div class="am-cf"></div>
-		</div>
-	</div>
-</main>
-
-<!--会员-->
-<div id="member" role="contentinfo">
-	<div class="member">
-		<div class="head am-text-center" role="heading">
-			<div class="face am-center">
-				<i class="am-icon-user"></i>
-				<img src="images/p1.jpg" alt="">	<!--没有自定义头像请屏蔽这句-->
+		</form>
+		<!--热门线路-->
+		<div class="hotline am-center">
+			<div class="title am-center">
+				<h1 class="am-fl">
+					<i class="am-icon-volume-up am-text-center"></i>
+					热门线路
+				</h1>
+				<a class="am-fr" href="javascript:;" title="">更多</a>
+				<!--点击出现：更多线路-->
+				<div class="am-cf"></div>
 			</div>
-			<div class="tel am-center am-text-center">158******58</div>
-			<div class="tip am-center">
-				<div class="am-fl">
-					<i class="am-icon-vimeo am-fl"></i>
-					<span class="am-fl">个人会员</span>
+			<div class="list am-center">
+				<ul role="list">
+					<li role="listitem">
+						<a class="am-text-center" href="" title="">
+							<!--点击时：直接传参给3_order.html-->
+							宜宾
+							<i class="icon-line-switch"></i>
+							成都
+						</a>
+					</li>
+					<li role="listitem">
+						<a class="am-text-center" href="" title="">
+							成都
+							<i class="icon-line-switch"></i>
+							宜宾
+						</a>
+					</li>
+					<li role="listitem">
+						<a class="am-text-center" href="" title="">
+							成都
+							<i class="icon-line-switch"></i>
+							自贡
+						</a>
+					</li>
+					<li role="listitem">
+						<a class="am-text-center" href="" title="">
+							自贡
+							<i class="icon-line-switch"></i>
+							成都
+						</a>
+					</li>
+					<li role="listitem">
+						<a class="am-text-center" href="" title="">
+							自贡
+							<i class="icon-line-switch"></i>
+							攀枝花
+						</a>
+					</li>
+					<li role="listitem">
+						<a class="am-text-center" href="" title="">
+							成都
+							<i class="icon-line-switch"></i>
+							攀枝花
+						</a>
+					</li>
+				</ul>
+				<div class="am-cf"></div>
+			</div>
+		</div>
+	</main>
+
+	<!--会员-->
+	<div id="member" role="contentinfo">
+		<div class="member">
+			<div class="head am-text-center" role="heading">
+				<div class="face am-center">
+					<i class="am-icon-user"></i>
+					<img src="images/p1.jpg" alt="">
+					<!--没有自定义头像请屏蔽这句-->
+				</div>
+				<div class="tel am-center am-text-center">158******58</div>
+				<div class="tip am-center">
+					<div class="am-fl">
+						<i class="am-icon-vimeo am-fl"></i>
+						<span class="am-fl">个人会员</span>
+						<div class="am-cf"></div>
+					</div>
+					<i class="am-icon-angle-right am-fr"></i>
 					<div class="am-cf"></div>
 				</div>
-				<i class="am-icon-angle-right am-fr"></i>
-				<div class="am-cf"></div>
 			</div>
-		</div>
-		<div class="main am-center" role="main">
-			<ul role="list">
-				<li role="listitem">
-					<a href="my_trip.html" title="">
-						<i class="icon-trip am-fl"></i>
-						<span class="am-fl">我的行程</span>
-						<div class="am-cf"></div>
-					</a>
-				</li>
-				<li role="listitem">
-					<a href="my_message.html" title="">
-						<i class="icon-commenting am-fl"></i>
-						<t class="am-round"></t>	<!--有新信息时加上这行-->
-						<span class="am-fl">消息中心</span>
-						<div class="am-cf"></div>
-					</a>
-				</li>
-				<li role="listitem">
-					<a href="my_coupon.html" title="">
-						<i class="icon-coupon am-fl"></i>
-						<span class="am-fl">优惠券</span>
-						<div class="am-cf"></div>
-					</a>
-				</li>
-				<li role="listitem">
-					<a href="my_recruit.html" title="">
-						<i class="icon-recruit am-fl"></i>
-						<span class="am-fl">成为车主</span>
-						<div class="am-cf"></div>
-					</a>
-				</li>
-				<li role="listitem">
-					<a href="setting.html" title="">
-						<i class="am-icon-cog am-fl"></i>
-						<span class="am-fl">个人设置</span>
-						<div class="am-cf"></div>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="foot am-text-center">
-			<a href="my_about.html" title="">
-				<div class="am-round am-center">
-					<i class="am-icon-users"></i>
-				</div>
-				<h1>关于我们</h1>
-			</a>
-			<a href="my_feedback.html" title="">
-				<div class="am-round am-center">
-					<i class="icon-feedback"></i>
-				</div>
-				<h1>意见反馈</h1>
-			</a>
+			<div class="main am-center" role="main">
+				<ul role="list">
+					<li role="listitem">
+						<a href="my_trip.html" title="">
+							<i class="icon-trip am-fl"></i>
+							<span class="am-fl">我的行程</span>
+							<div class="am-cf"></div>
+						</a>
+					</li>
+					<li role="listitem">
+						<a href="my_message.html" title="">
+							<i class="icon-commenting am-fl"></i>
+							<t class="am-round"></t>
+							<!--有新信息时加上这行-->
+							<span class="am-fl">消息中心</span>
+							<div class="am-cf"></div>
+						</a>
+					</li>
+					<li role="listitem">
+						<a href="my_coupon.html" title="">
+							<i class="icon-coupon am-fl"></i>
+							<span class="am-fl">优惠券</span>
+							<div class="am-cf"></div>
+						</a>
+					</li>
+					<li role="listitem">
+						<a href="my_recruit.html" title="">
+							<i class="icon-recruit am-fl"></i>
+							<span class="am-fl">成为车主</span>
+							<div class="am-cf"></div>
+						</a>
+					</li>
+					<li role="listitem">
+						<a href="setting.html" title="">
+							<i class="am-icon-cog am-fl"></i>
+							<span class="am-fl">个人设置</span>
+							<div class="am-cf"></div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="foot am-text-center">
+				<a href="my_about.html" title="">
+					<div class="am-round am-center">
+						<i class="am-icon-users"></i>
+					</div>
+					<h1>关于我们</h1>
+				</a>
+				<a href="my_feedback.html" title="">
+					<div class="am-round am-center">
+						<i class="icon-feedback"></i>
+					</div>
+					<h1>意见反馈</h1>
+				</a>
+			</div>
 		</div>
 	</div>
-</div>
 
-<!--选择城市-->
-<div id="selectCity" role="contentinfo">
-	<div class="box">
-		<div class="header">
-			<form class="am-center" id="" name="" method="post" action="">
-				<input class="am-fl" type="search" id="" name="" placeholder="城市中文名或拼音" autocomplete="off">
-				<a class="am-fr" href="javascript:;" title="">取消</a>
-				<div class="am-cf"></div>
-			</form>
-		</div>
-		<div class="main am-center">
-			<div class="current">当前城市：成都市</div>
-			<div class="list">
-				<div class="title">
-					<i class="am-icon-star"></i>
-					热门城市
-				</div>
-				<ul role="list">
-					<li role="listitem">成都市</li>
-					<li role="listitem">宜宾市</li>
-					<li role="listitem">自贡市</li>
-				</ul>
-				<div class="title">A</div>
-				<ul role="list">
-					<li role="listitem">A成都市</li>
-					<li role="listitem">A宜宾市</li>
-					<li role="listitem">A自贡市</li>
-				</ul>
-				<div class="title">M</div>
-				<ul role="list">
-					<li role="listitem">M成都市</li>
-					<li role="listitem">M宜宾市</li>
-					<li role="listitem">M自贡市</li>
-				</ul>
-				<div class="title">R</div>
-				<ul role="list">
-					<li role="listitem">R成都市</li>
-					<li role="listitem">R宜宾市</li>
-					<li role="listitem">R自贡市</li>
-				</ul>
-				<div class="title">Y</div>
-				<ul role="list">
-					<li role="listitem">Y成都市</li>
-					<li role="listitem">Y宜宾市</li>
-					<li role="listitem">Y自贡市</li>
-				</ul>
-				<div class="title">Z</div>
-				<ul role="list">
-					<li role="listitem">Z成都市</li>
-					<li role="listitem">Z宜宾市</li>
-					<li role="listitem">Z自贡市</li>
-					<li role="listitem">紫荆城邦</li>
-				</ul>
-				<div class="am-cf"></div>
+	<!--选择城市-->
+	<div id="selectCity" role="contentinfo">
+		<div class="box">
+			<div class="header">
+				<form class="am-center" id="" name="" method="post" action="">
+					<input class="am-fl" type="search" id="" name="" placeholder="城市中文名或拼音" autocomplete="off">
+					<a class="am-fr" href="javascript:;" title="">取消</a>
+					<div class="am-cf"></div>
+				</form>
 			</div>
-		</div>
-		<div class="aside">
-			<ul role="list">
-				<li role="listitem">
-					<a href="#hot" title="">
+			<div class="main am-center">
+				<div class="current">当前城市：成都市</div>
+				<div class="list">
+					<div class="title">
 						<i class="am-icon-star"></i>
-					</a>
-				</li>
-				<li role="listitem">A</li>
-				<li role="listitem">M</li>
-				<li role="listitem">R</li>
-				<li role="listitem">Y</li>
-				<li role="listitem">Z</li>
-			</ul>
+						热门城市
+					</div>
+					<ul role="list">
+						<li role="listitem">成都市</li>
+						<li role="listitem">宜宾市</li>
+						<li role="listitem">自贡市</li>
+					</ul>
+					<div class="title">A</div>
+					<ul role="list">
+						<li role="listitem">A成都市</li>
+						<li role="listitem">A宜宾市</li>
+						<li role="listitem">A自贡市</li>
+					</ul>
+					<div class="title">M</div>
+					<ul role="list">
+						<li role="listitem">M成都市</li>
+						<li role="listitem">M宜宾市</li>
+						<li role="listitem">M自贡市</li>
+					</ul>
+					<div class="title">R</div>
+					<ul role="list">
+						<li role="listitem">R成都市</li>
+						<li role="listitem">R宜宾市</li>
+						<li role="listitem">R自贡市</li>
+					</ul>
+					<div class="title">Y</div>
+					<ul role="list">
+						<li role="listitem">Y成都市</li>
+						<li role="listitem">Y宜宾市</li>
+						<li role="listitem">Y自贡市</li>
+					</ul>
+					<div class="title">Z</div>
+					<ul role="list">
+						<li role="listitem">Z成都市</li>
+						<li role="listitem">Z宜宾市</li>
+						<li role="listitem">Z自贡市</li>
+						<li role="listitem">紫荆城邦</li>
+					</ul>
+					<div class="am-cf"></div>
+				</div>
+			</div>
+			<div class="aside">
+				<ul role="list">
+					<li role="listitem">
+						<a href="#hot" title="">
+							<i class="am-icon-star"></i>
+						</a>
+					</li>
+					<li role="listitem">A</li>
+					<li role="listitem">M</li>
+					<li role="listitem">R</li>
+					<li role="listitem">Y</li>
+					<li role="listitem">Z</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
 
-<!--全部服务-->
-<div id="service" role="contentinfo">
-	<div class="fixed"></div>
-	<header class="am-text-center" role="heading">
-		全部服务
-		<i class="am-icon-close"></i>
-	</header>
-	<main role="main">
-		<ul role="list">
-			<li role="listitem">
-				<h1 class="am-text">城际快车</h1>
-			</li>
-			<li role="listitem">
-				<h1 class="am-text">顺风车</h1>
-			</li>
-			<li role="listitem">
-				<h1 class="am-text">专车</h1>
-			</li>
-			<li role="listitem">
-				<h1 class="am-text">政府大巴</h1>
-			</li>
-			<li role="listitem">
-				<h1 class="am-text">小件货运</h1>
-			</li>
-			<li role="listitem">
-				<h1 class="am-text">代驾</h1>
-			</li>
-		</ul>
-	</main>
-</div>
-
-<!--全部线路-->
-<div id="line" role="contentinfo">
-	<div class="fixed"></div>
-	<main role="main">
-		<div class="box am-center" role="listbox">
+	<!--全部服务-->
+	<div id="service" role="contentinfo">
+		<div class="fixed"></div>
+		<header class="am-text-center" role="heading">
+			全部服务
+			<i class="am-icon-close"></i>
+		</header>
+		<main role="main">
 			<ul role="list">
-				<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="5" role="listitem"><!--start：起点，end：终点，price：正向价格，price2：逆向价格，ticket：优惠券-->
-					<i class="icon-line-select"></i>
-					成都
-					<i class="icon-line-switch"></i>
-					宜宾
-					<span>热门</span><!--热门线路添加这个标签-->
+				<li role="listitem">
+					<h1 class="am-text">城际快车</h1>
 				</li>
-				<li data-start="宜宾" data-end="成都" data-price="120" data-price2="135" data-ticket="5" role="listitem">
-					<i class="icon-line-select"></i>
-					宜宾
-					<i class="icon-line-switch"></i>
-					成都
-					<span>热门</span>
+				<li role="listitem">
+					<h1 class="am-text">顺风车</h1>
 				</li>
-				<li data-start="成都" data-end="自贡" data-price="99" data-price2="88" data-ticket="5" role="listitem">
-					<i class="icon-line-select"></i>
-					成都
-					<i class="icon-line-switch"></i>
-					自贡
-					<span>热门</span>
+				<li role="listitem">
+					<h1 class="am-text">专车</h1>
 				</li>
-				<li data-start="自贡" data-end="成都" data-price="88" data-price2="99" data-ticket="5" role="listitem">
-					<i class="icon-line-select"></i>
-					自贡
-					<i class="icon-line-switch"></i>
-					成都
-					<span>热门</span>
+				<li role="listitem">
+					<h1 class="am-text">政府大巴</h1>
 				</li>
-				<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					成都
-					<i class="icon-line-switch"></i>
-					宜宾
+				<li role="listitem">
+					<h1 class="am-text">小件货运</h1>
 				</li>
-				<li data-start="宜宾" data-end="成都" data-price="120" data-price2="135" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					宜宾
-					<i class="icon-line-switch"></i>
-					成都
-				</li>
-				<li data-start="成都" data-end="自贡" data-price="99" data-price2="88" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					成都
-					<i class="icon-line-switch"></i>
-					自贡
-				</li>
-				<li data-start="自贡" data-end="成都" data-price="88" data-price2="99" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					自贡
-					<i class="icon-line-switch"></i>
-					成都
-				</li>
-				<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					成都
-					<i class="icon-line-switch"></i>
-					宜宾
-				</li>
-				<li data-start="宜宾" data-end="成都" data-price="120" data-price2="135" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					宜宾
-					<i class="icon-line-switch"></i>
-					成都
-				</li>
-				<li data-start="成都" data-end="自贡" data-price="99" data-price2="88" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					成都
-					<i class="icon-line-switch"></i>
-					自贡
-				</li>
-				<li data-start="自贡" data-end="成都" data-price="88" data-price2="99" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					自贡
-					<i class="icon-line-switch"></i>
-					成都
-				</li>
-				<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					成都
-					<i class="icon-line-switch"></i>
-					宜宾
-				</li>
-				<li data-start="宜宾" data-end="成都" data-price="120" data-price2="135" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					宜宾
-					<i class="icon-line-switch"></i>
-					成都
-				</li>
-				<li data-start="成都" data-end="自贡" data-price="99" data-price2="88" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					成都
-					<i class="icon-line-switch"></i>
-					自贡
-				</li>
-				<li data-start="自贡" data-end="成都" data-price="88" data-price2="99" data-ticket="0" role="listitem">
-					<i class="icon-line-select"></i>
-					自贡
-					<i class="icon-line-switch"></i>
-					成都
+				<li role="listitem">
+					<h1 class="am-text">代驾</h1>
 				</li>
 			</ul>
-		</div>
-	</main>
-</div>
-<script src="http://api.map.baidu.com/api?v=2.0&ak=2ltApXY0YKGHeMcE3Ksur4C3m3cMUPpd"></script>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="lCalendar/js/lCalendar.min.js"></script>
-<script src="js/indexPublic.js"></script>
-<script src="js/index.js"></script>
+		</main>
+	</div>
+
+	<!--全部线路-->
+	<div id="line" role="contentinfo">
+		<div class="fixed"></div>
+		<main role="main">
+			<div class="box am-center" role="listbox">
+				<ul role="list" id="line-list">
+					<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="5" role="listitem">
+						<!--start：起点，end：终点，price：正向价格，price2：逆向价格，ticket：优惠券-->
+						<i class="icon-line-select"></i>
+						成都
+						<i class="icon-line-switch"></i>
+						宜宾
+						<span>热门</span>
+						<!--热门线路添加这个标签-->
+					</li>
+					<li data-start="宜宾" data-end="成都" data-price="120" data-price2="135" data-ticket="5" role="listitem">
+						<i class="icon-line-select"></i>
+						宜宾
+						<i class="icon-line-switch"></i>
+						成都
+					</li>
+				</ul>
+			</div>
+		</main>
+	</div>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=2ltApXY0YKGHeMcE3Ksur4C3m3cMUPpd"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="lCalendar/js/lCalendar.min.js"></script>
+	<script src="js/indexPublic.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$(function () {
+			$.get('http://106.12.145.154:2989/NcpCmsApi/c/getLinesList?isHot=1', function (result) {
+				console.log(result);
+				var html = '';
+				var array = result.data;
+
+				for (var i = 0; i < array.length; i++) {
+					html += `
+					<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="5" role="listitem">
+						<i class="icon-line-select"></i>
+						${array[i].lineName}
+						<span>热门</span>
+					</li>
+					`
+				}
+				$('#line-list').append(html);
+			});
+			$.get('http://106.12.145.154:2989/NcpCmsApi/c/getLinesList?isHot=0', function (result) {
+				var html = '';
+				var array = result.data;
+				for (var i = 0; i < array.length; i++) {
+					html += `
+					<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="5" role="listitem">
+						<i class="icon-line-select"></i>
+						${array[i].lineName}
+					</li>
+					`
+				}
+				$('#line-list').append(html);
+			});
+		});
+	</script>
 </body>
+
 </html>

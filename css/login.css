@@ -198,3 +198,7 @@ footer a i {
 	font-size: .16rem;
 	height: .4rem;
 }
+
+#alert-modal{
+	font-size: 14px;
+}
