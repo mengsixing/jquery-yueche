@@ -3,6 +3,11 @@ for：业务首页
 date：2018-09
 */
 /* CSS Document */
+
+#app {
+	height: 100%;
+}
+
 main {	
 	position: absolute;
 	bottom: 0;
