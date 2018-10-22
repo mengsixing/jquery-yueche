@@ -152,49 +152,14 @@
 				</div>
 				<div class="list am-center">
 					<ul role="list">
-						<li role="listitem">
+						<li role="listitem" v-for="item in hotLineList">
 							<a class="am-text-center" href="" title="">
-								<!--点击时：直接传参给3_order.html-->
-								宜宾
+								{{item.startAdd}}
 								<i class="icon-line-switch"></i>
-								成都
+								{{item.endAdd}}
 							</a>
 						</li>
-						<li role="listitem">
-							<a class="am-text-center" href="" title="">
-								成都
-								<i class="icon-line-switch"></i>
-								宜宾
-							</a>
-						</li>
-						<li role="listitem">
-							<a class="am-text-center" href="" title="">
-								成都
-								<i class="icon-line-switch"></i>
-								自贡
-							</a>
-						</li>
-						<li role="listitem">
-							<a class="am-text-center" href="" title="">
-								自贡
-								<i class="icon-line-switch"></i>
-								成都
-							</a>
-						</li>
-						<li role="listitem">
-							<a class="am-text-center" href="" title="">
-								自贡
-								<i class="icon-line-switch"></i>
-								攀枝花
-							</a>
-						</li>
-						<li role="listitem">
-							<a class="am-text-center" href="" title="">
-								成都
-								<i class="icon-line-switch"></i>
-								攀枝花
-							</a>
-						</li>
+						
 					</ul>
 					<div class="am-cf"></div>
 				</div>
@@ -361,23 +326,8 @@
 			</header>
 			<main role="main">
 				<ul role="list">
-					<li role="listitem">
-						<h1 class="am-text">城际快车</h1>
-					</li>
-					<li role="listitem">
-						<h1 class="am-text">顺风车</h1>
-					</li>
-					<li role="listitem">
-						<h1 class="am-text">专车</h1>
-					</li>
-					<li role="listitem">
-						<h1 class="am-text">政府大巴</h1>
-					</li>
-					<li role="listitem">
-						<h1 class="am-text">小件货运</h1>
-					</li>
-					<li role="listitem">
-						<h1 class="am-text">代驾</h1>
+					<li role="listitem" v-for="item in serviceList">
+						<h1 class="am-text">{{item.expressName}}</h1>
 					</li>
 				</ul>
 			</main>
@@ -389,21 +339,19 @@
 			<main role="main">
 				<div class="box am-center" role="listbox">
 					<ul role="list" id="line-list">
-						<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="5" role="listitem">
-							<!--start：起点，end：终点，price：正向价格，price2：逆向价格，ticket：优惠券-->
+						<li v-for="item in hotLineList" :data-start="item.startAdd" data-end="item.endAdd" data-price="135" data-price2="120" data-ticket="5" role="listitem">
 							<i class="icon-line-select"></i>
-							成都
+							{{item.startAdd}}
 							<i class="icon-line-switch"></i>
-							宜宾
+							{{item.endAdd}}
 							<span>热门</span>
-							<!--热门线路添加这个标签-->
 						</li>
-						<li data-start="宜宾" data-end="成都" data-price="120" data-price2="135" data-ticket="5" role="listitem">
+						<!-- <li data-start="宜宾" data-end="成都" data-price="120" data-price2="135" data-ticket="5" role="listitem">
 							<i class="icon-line-select"></i>
 							宜宾
 							<i class="icon-line-switch"></i>
 							成都
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</main>
@@ -423,7 +371,9 @@
 		var app = new Vue({
 			el: '#app',
 			data: {
-				myInfo: {}
+				myInfo: {},
+				serviceList: [],
+				hotLineList:[],
 			},
 			created() {
 				this.getMyInfo();
@@ -432,6 +382,13 @@
 				getMyInfo() {
 					$.get(BASE_URL + '/NcpCmsApi/getMyInfo?personId=18980065951', (result) => {
 						this.myInfo = result.data;
+					});
+					$.get(BASE_URL + '/NcpCmsApi/getService', (result) => {
+						this.serviceList = result.data;
+					});
+					$.get(BASE_URL + '/NcpCmsApi/getLinesList?isHot=1', (result) => {
+						console.log(result);
+						this.hotLineList = result.data;
 					});
 				}
 			}

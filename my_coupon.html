@@ -1,115 +1,82 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="screen-orientation" content="portrait">
-<meta name="x5-orientation" content="portrait">
-<meta name="format-detection" content="telephone=no">
-<meta name="format-detection" content="email=no">
-<meta name="Keywords" content="">
-<meta name="Description" content="">
-<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
-<link rel="stylesheet" href="iconFont/style.css">
-<link rel="stylesheet" href="css/public.css">
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/coupon.css">
-<title>我的优惠券</title>
-</head>
-<body>
-<!--头部-->
-<header id="header" role="heading">
-	<a class="back" href="javascript:history.go(-1);" title="">
-		<i class="am-icon-angle-left"></i>
-		<span>返回</span>
-	</a>
-	<h1 class="am-text-center">我的优惠券</h1>
-</header>
 
-<!--主体-->
-<main role="main">
-	<div class="box am-center">
-		<ul role="list">
-			<li role="listitem">
-				<i class="icon-coupon-offer am-fl"></i>	<!--优惠券-->
-				<div class="content am-fl">
-					<div>快车券</div>
-					有效期至2018-09-10
-				</div>
-				<div class="value am-fr"><span>5</span>元</div>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+	<link rel="stylesheet" href="iconFont/style.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/coupon.css">
+	<script src="./js/baseUrl.js"></script>
+	<title>我的优惠券</title>
+</head>
+
+<body>
+
+	<div id="app">
+
+		<!--头部-->
+		<header id="header" role="heading">
+			<a class="back" href="javascript:history.go(-1);" title="">
+				<i class="am-icon-angle-left"></i>
+				<span>返回</span>
+			</a>
+			<h1 class="am-text-center">我的优惠券</h1>
+		</header>
+
+		<!--主体-->
+		<main role="main">
+			<div class="box am-center">
+				<ul role="list">
+					<li class="expired" role="listitem" v-for="item in list">
+						<i class="icon-coupon-offer am-fl"></i>
+						<!--优惠券-->
+						<div class="content am-fl">
+							<div>{{item.couponName}}</div>
+							有效期至{{item.voucherDate}}
+						</div>
+						<div class="value am-fr"><span>{{item.couponValue}}</span>元</div>
+						<div class="am-cf"></div>
+					</li>
+					
+				</ul>
 				<div class="am-cf"></div>
-			</li>
-			<li role="listitem">
-				<i class="icon-coupon-discount am-fl"></i>	<!--折扣券-->
-				<div class="content am-fl">
-					<div>顺风车券</div>
-					有效期至2018-09-09
-				</div>
-				<div class="value am-fr"><span>95</span>折</div>
-				<div class="am-cf"></div>
-			</li>
-			<li role="listitem">
-				<i class="icon-coupon-offer am-fl"></i>	<!--优惠券-->
-				<div class="content am-fl">
-					<div>快车券</div>
-					有效期至2018-09-08
-				</div>
-				<div class="value am-fr"><span>5</span>元</div>
-				<div class="am-cf"></div>
-			</li>
-			<li role="listitem">
-				<i class="icon-coupon-discount am-fl"></i>	<!--折扣券-->
-				<div class="content am-fl">
-					<div>顺风车券</div>
-					有效期至2018-09-07
-				</div>
-				<div class="value am-fr"><span>95</span>折</div>
-				<div class="am-cf"></div>
-			</li>
-			<li role="listitem">
-				<i class="icon-coupon-offer am-fl"></i>	<!--优惠券-->
-				<div class="content am-fl">
-					<div>快车券</div>
-					有效期至2018-09-06
-				</div>
-				<div class="value am-fr"><span>5</span>元</div>
-				<div class="am-cf"></div>
-			</li>
-			<li role="listitem">
-				<i class="icon-coupon-discount am-fl"></i>	<!--折扣券-->
-				<div class="content am-fl">
-					<div>顺风车券</div>
-					有效期至2018-09-05
-				</div>
-				<div class="value am-fr"><span>95</span>折</div>
-				<div class="am-cf"></div>
-			</li>
-			<li class="expired" role="listitem">
-				<i class="icon-coupon-offer am-fl"></i>	<!--优惠券-->
-				<div class="content am-fl">
-					<div>快车券</div>
-					有效期至2018-09-04
-				</div>
-				<div class="value am-fr"><span>5</span>元</div>
-				<div class="am-cf"></div>
-			</li>
-			<li class="expired" role="listitem">
-				<i class="icon-coupon-discount am-fl"></i>	<!--折扣券-->
-				<div class="content am-fl">
-					<div>顺风车券</div>
-					有效期至2018-09-03
-				</div>
-				<div class="value am-fr"><span>95</span>折</div>
-				<div class="am-cf"></div>
-			</li>
-		</ul>
-		<div class="am-cf"></div>		
+			</div>
+		</main>
 	</div>
-</main>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				list: []
+			},
+			created() {
+				this.getData();
+			},
+			methods: {
+				getData() {
+					$.get(BASE_URL + '/NcpCmsApi/getMyCoupon?personId=18980065951', (result) => {
+						this.list = result.data;
+					});
+				}
+			}
+		})
+	</script>
 </body>
+
 </html>

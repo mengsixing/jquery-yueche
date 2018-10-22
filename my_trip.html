@@ -1,132 +1,117 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="screen-orientation" content="portrait">
-<meta name="x5-orientation" content="portrait">
-<meta name="format-detection" content="telephone=no">
-<meta name="format-detection" content="email=no">
-<meta name="Keywords" content="">
-<meta name="Description" content="">
-<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
-<link rel="stylesheet" href="iconFont/style.css">
-<link rel="stylesheet" href="css/public.css">
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/trip.css">
-<title>我的行程</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+	<link rel="stylesheet" href="iconFont/style.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/trip.css">
+	<title>我的行程</title>
 </head>
+
 <body>
-<!--头部-->
-<header id="header" role="heading">
-	<a class="back" href="javascript:history.go(-1);" title="">
-		<i class="am-icon-angle-left"></i>
-		<span>返回</span>
-	</a>
-	<h1 class="am-text-center">我的行程</h1>
-</header>
+	<div id="app">
+		<!--头部-->
+		<header id="header" role="heading">
+			<a class="back" href="javascript:history.go(-1);" title="">
+				<i class="am-icon-angle-left"></i>
+				<span>返回</span>
+			</a>
+			<h1 class="am-text-center">我的行程</h1>
+		</header>
 
-<!--导航-->
-<nav role="nav">
-	<ul class="am-text-center" role="list">
-		<li class="active" role="listitem">全部</li>
-		<li role="listitem">已完成</li>
-		<li role="listitem">未完成</li>
-	</ul>
-</nav>
+		<!--导航-->
+		<nav role="nav">
+			<ul class="am-text-center" role="list">
+				<li class="active" role="listitem">全部</li>
+				<li role="listitem">已完成</li>
+				<li role="listitem">未完成</li>
+			</ul>
+		</nav>
 
-<!--主体-->
-<main role="main">
-	<div class="box am-center">
-		<ul role="list">
-			<li class="done" role="listitem">	<!--已完成-->
-				<div class="am-fl">
-					<div class="time">2018-09-10 16:35</div>
-					<div class="line">
-						<div class="am-fl"><span class="am-round"></span>成都</div>
-						<i class="icon-line-switch am-fl"></i>
-						<div class="am-fl"><span class="danger am-round"></span>自贡</div>
+		<!--主体-->
+		<main role="main">
+			<div class="box am-center">
+				<ul role="list">
+					<li class="done" role="listitem" v-for="item in myTrips">
+							<!-- "orderMobile": "234234",
+							"startAdd": "成都站",
+							"orderCode": "2342",
+							"endAdd": "宜宾市",
+							"orderTime": "2018-06-14 17:28:05",
+							"orderId": "936c702e-35c7-439a-b0ba-77554c4c4b6a",
+							"useCarType": "use_car_type_bc",
+							"personName": "海盗船长" -->
+						<!--已完成-->
+						<div class="am-fl">
+							<div class="time">{{item.orderTime}}</div>
+							<div class="line">
+								<div class="am-fl"><span class="am-round"></span>{{item.startAdd}}</div>
+								<i class="icon-line-switch am-fl"></i>
+								<div class="am-fl"><span class="danger am-round"></span>{{item.endAdd}}</div>
+								<div class="am-cf"></div>
+							</div>
+						</div>
+						<div class="category am-fr">城际快车</div>
 						<div class="am-cf"></div>
-					</div>
-				</div>
-				<div class="category am-fr">城际快车</div>
-				<div class="am-cf"></div>
-			</li>
-			<li class="done" role="listitem">
-				<div class="am-fl">
-					<div class="time">2018-09-09 16:35</div>
-					<div class="line">
-						<div class="am-fl"><span class="am-round"></span>成都</div>
-						<i class="icon-line-switch am-fl"></i>
-						<div class="am-fl"><span class="danger am-round"></span>自贡</div>
+					</li>
+
+					<li class="none" role="listitem">
+						<!--未完成-->
+						<div class="am-fl">
+							<div class="time">2018-09-06 16:35</div>
+							<div class="line">
+								<div class="am-fl"><span class="am-round"></span>成都</div>
+								<i class="icon-line-switch am-fl"></i>
+								<div class="am-fl"><span class="danger am-round"></span>自贡</div>
+								<div class="am-cf"></div>
+							</div>
+						</div>
+						<div class="category am-fr">城际快车</div>
 						<div class="am-cf"></div>
-					</div>
-				</div>
-				<div class="category am-fr">顺风车</div>
+					</li>
+				</ul>
 				<div class="am-cf"></div>
-			</li>
-			<li class="done" role="listitem">
-				<div class="am-fl">
-					<div class="time">2018-09-08 16:35</div>
-					<div class="line">
-						<div class="am-fl"><span class="am-round"></span>成都</div>
-						<i class="icon-line-switch am-fl"></i>
-						<div class="am-fl"><span class="danger am-round"></span>自贡</div>
-						<div class="am-cf"></div>
-					</div>
-				</div>
-				<div class="category am-fr">城际快车</div>
-				<div class="am-cf"></div>
-			</li>
-			<li class="done" role="listitem">
-				<div class="am-fl">
-					<div class="time">2018-09-07 16:35</div>
-					<div class="line">
-						<div class="am-fl"><span class="am-round"></span>成都</div>
-						<i class="icon-line-switch am-fl"></i>
-						<div class="am-fl"><span class="danger am-round"></span>自贡</div>
-						<div class="am-cf"></div>
-					</div>
-				</div>
-				<div class="category am-fr">顺风车</div>
-				<div class="am-cf"></div>
-			</li>
-			<li class="none" role="listitem">	<!--未完成-->
-				<div class="am-fl">
-					<div class="time">2018-09-06 16:35</div>
-					<div class="line">
-						<div class="am-fl"><span class="am-round"></span>成都</div>
-						<i class="icon-line-switch am-fl"></i>
-						<div class="am-fl"><span class="danger am-round"></span>自贡</div>
-						<div class="am-cf"></div>
-					</div>
-				</div>
-				<div class="category am-fr">城际快车</div>
-				<div class="am-cf"></div>
-			</li>
-			<li class="none" role="listitem">
-				<div class="am-fl">
-					<div class="time">2018-09-05 16:35</div>
-					<div class="line">
-						<div class="am-fl"><span class="am-round"></span>成都</div>
-						<i class="icon-line-switch am-fl"></i>
-						<div class="am-fl"><span class="danger am-round"></span>自贡</div>
-						<div class="am-cf"></div>
-					</div>
-				</div>
-				<div class="category am-fr">顺风车</div>
-				<div class="am-cf"></div>
-			</li>
-		</ul>
-		<div class="am-cf"></div>
+			</div>
+		</main>
 	</div>
-</main>
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/trip.js"></script>
+
+	<script src="./js/baseUrl.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="js/trip.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		var app = new Vue({
+			el: '#app',
+			data: {
+				myTrips: [],
+			},
+			created() {
+				this.getData();
+			},
+			methods: {
+				getData() {
+					$.get(BASE_URL + '/NcpCmsApi/getMyOrder?pageSize=50&pageNo=1&orderType=1&personId=18980065951', (result) => {
+						this.myTrips = result.data.list;
+					});
+				}
+			}
+		})
+	</script>
 </body>
+
 </html>
