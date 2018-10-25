@@ -37,9 +37,10 @@
 		<!--导航-->
 		<nav role="nav">
 			<ul class="am-text-center" role="list">
-				<li class="active" role="listitem">全部</li>
+				<li v-for="item in tabItems" :class="{active:item.isSelected}" @click="selectTab(item)">{{item.text}}</li>
+				<!-- <li class="active" role="listitem">全部</li>
 				<li role="listitem">已完成</li>
-				<li role="listitem">未完成</li>
+				<li role="listitem">未完成</li> -->
 			</ul>
 		</nav>
 
@@ -48,7 +49,7 @@
 			<div class="box am-center">
 				<ul role="list">
 					<li class="done" role="listitem" v-for="item in myTrips">
-							<!-- "orderMobile": "234234",
+						<!-- "orderMobile": "234234",
 							"startAdd": "成都站",
 							"orderCode": "2342",
 							"endAdd": "宜宾市",
@@ -98,6 +99,7 @@
 		var app = new Vue({
 			el: '#app',
 			data: {
+				tabItems: [{ text: '全部', isSelected: true }, { text: '已完成', isSelected: false }, { text: '未完成', isSelected: false }],
 				myTrips: [],
 			},
 			created() {
@@ -108,6 +110,12 @@
 					$.get(BASE_URL + '/NcpCmsApi/getMyOrder?pageSize=50&pageNo=1&orderType=1&personId=18980065951', (result) => {
 						this.myTrips = result.data.list;
 					});
+				},
+				selectTab(item) {
+					this.tabItems.forEach(item => {
+						item.isSelected = false;
+					});
+					item.isSelected = true;
 				}
 			}
 		})

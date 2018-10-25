@@ -1,42 +1,55 @@
 <!doctype html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-<meta name="renderer" content="webkit">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="screen-orientation" content="portrait">
-<meta name="x5-orientation" content="portrait">
-<meta name="format-detection" content="telephone=no">
-<meta name="format-detection" content="email=no">
-<meta name="Keywords" content="">
-<meta name="Description" content="">
-<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
-<link rel="stylesheet" href="iconFont/style.css">
-<link rel="stylesheet" href="css/public.css">
-<link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/feedback.css">
-<title>意见反馈</title>
-</head>
-<body>
-<!--头部-->
-<header id="header" role="heading">
-	<a class="back" href="javascript:history.go(-1);" title="">
-		<i class="am-icon-angle-left"></i>
-		<span>返回</span>
-	</a>
-	<h1 class="am-text-center">意见反馈</h1>
-</header>
 
-<!--主体-->
-<main role="main">
-	<form method="post" action="" onSubmit="" role="form">
-		<textarea class="box am-center" placeholder="请留下您的宝贵意见，我们一直努力为您更好的服务~"></textarea>
-		<button type="submit" class="am-btn am-btn-block am-btn-danger am-center">提交</button>
-	</form>
-</main>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-siteapp">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="screen-orientation" content="portrait">
+	<meta name="x5-orientation" content="portrait">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="Keywords" content="">
+	<meta name="Description" content="">
+	<link rel="stylesheet" href="AmazeUI/css/amazeui.min.css">
+	<link rel="stylesheet" href="iconFont/style.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/feedback.css">
+	<title>意见反馈</title>
+</head>
+
+<body>
+	<!--头部-->
+	<header id="header" role="heading">
+		<a class="back" href="javascript:history.go(-1);" title="">
+			<i class="am-icon-angle-left"></i>
+			<span>返回</span>
+		</a>
+		<h1 class="am-text-center">意见反馈</h1>
+	</header>
+
+	<!--主体-->
+	<main role="main">
+		<textarea id="textarea" class="box am-center" placeholder="请留下您的宝贵意见，我们一直努力为您更好的服务~"></textarea>
+		<button id="submit_btn" type="submit" class="am-btn am-btn-block am-btn-danger am-center">提交</button>
+	</main>
+	<script src="./js/baseUrl.js"></script>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script>
+		$(function () {
+			$('#submit_btn').click(function () {
+				var content = $('#textarea').val();
+				$.get(BASE_URL + '/NcpCmsApi/doFeedback?personId=18980065951&content=' + content, (result) => {
+					alert(result.msg);
+				});
+			});
+		});
+	</script>
 </body>
+
 </html>

@@ -277,7 +277,7 @@ main .hotline.active {
 	margin: 0 -.03rem;
 }
 .hotline .list li {
-	width: 33.33333333333333%;
+	min-width: 33.33333333333333%;
 	font-size: .12rem;
 	margin-top: .09rem;
 	padding: 0 .03rem;
