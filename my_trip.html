@@ -107,7 +107,7 @@
 			},
 			methods: {
 				getData() {
-					$.get(BASE_URL + '/NcpCmsApi/getMyOrder?pageSize=50&pageNo=1&orderType=1&personId=18980065951', (result) => {
+					$.get(BASE_URL + '/NcpCmsApi/getMyOrder?pageSize=50&pageNo=1&orderType=1&personId=#(personId)', (result) => {
 						this.myTrips = result.data.list;
 					});
 				},

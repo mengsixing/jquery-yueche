@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="lCalendar/css/lCalendar.css">
 	<link rel="stylesheet" href="css/indexPublic.css">
 	<link rel="stylesheet" href="css/index.css">
-	<title>业务首页</title>
+	<title>业务首页#(personName)</title>
 </head>
 
 <body>
@@ -159,7 +159,7 @@
 								{{item.endAdd}}
 							</a>
 						</li>
-						
+
 					</ul>
 					<div class="am-cf"></div>
 				</div>
@@ -339,7 +339,8 @@
 			<main role="main">
 				<div class="box am-center" role="listbox">
 					<ul role="list" id="line-list">
-						<li v-for="item in hotLineList" :data-start="item.startAdd" data-end="item.endAdd" data-price="135" data-price2="120" data-ticket="5" role="listitem">
+						<li v-for="item in hotLineList" :data-start="item.startAdd" data-end="item.endAdd" data-price="135" data-price2="120" data-ticket="5"
+						 role="listitem">
 							<i class="icon-line-select"></i>
 							{{item.startAdd}}
 							<i class="icon-line-switch"></i>
@@ -360,7 +361,7 @@
 
 	</div>
 
-	<script src="./js/baseUrl.js"></script>
+	<script src="js/baseUrl.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
 	<script src="http://api.map.baidu.com/api?v=2.0&ak=2ltApXY0YKGHeMcE3Ksur4C3m3cMUPpd"></script>
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -373,20 +374,20 @@
 			data: {
 				myInfo: {},
 				serviceList: [],
-				hotLineList:[],
+				hotLineList: [],
 			},
 			created() {
 				this.getMyInfo();
 			},
 			methods: {
 				getMyInfo() {
-					$.get(BASE_URL + '/NcpCmsApi/getMyInfo?personId=18980065951', (result) => {
+					$.get(BASE_URL + '/getMyInfo?personId=#(personId)', (result) => {
 						this.myInfo = result.data;
 					});
-					$.get(BASE_URL + '/NcpCmsApi/getService', (result) => {
+					$.get(BASE_URL + '/getService', (result) => {
 						this.serviceList = result.data;
 					});
-					$.get(BASE_URL + '/NcpCmsApi/getLinesList?isHot=1', (result) => {
+					$.get(BASE_URL + '/getLinesList?isHot=1', (result) => {
 						console.log(result);
 						this.hotLineList = result.data;
 					});
@@ -394,39 +395,6 @@
 			}
 		})
 	</script>
-	<!-- <script>
-		$(function () {
-			$.get('http://106.12.145.154:2989/NcpCmsApi/c/getLinesList?isHot=1', function (result) {
-				console.log(result);
-				var html = '';
-				var array = result.data;
-
-				for (var i = 0; i < array.length; i++) {
-					html += `
-					<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="5" role="listitem">
-						<i class="icon-line-select"></i>
-						${array[i].lineName}
-						<span>热门</span>
-					</li>
-					`
-				}
-				$('#line-list').append(html);
-			});
-			$.get('http://106.12.145.154:2989/NcpCmsApi/c/getLinesList?isHot=0', function (result) {
-				var html = '';
-				var array = result.data;
-				for (var i = 0; i < array.length; i++) {
-					html += `
-					<li data-start="成都" data-end="宜宾" data-price="135" data-price2="120" data-ticket="5" role="listitem">
-						<i class="icon-line-select"></i>
-						${array[i].lineName}
-					</li>
-					`
-				}
-				$('#line-list').append(html);
-			});
-		});
-	</script> -->
 </body>
 
 </html>

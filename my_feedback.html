@@ -44,7 +44,7 @@
 		$(function () {
 			$('#submit_btn').click(function () {
 				var content = $('#textarea').val();
-				$.get(BASE_URL + '/NcpCmsApi/doFeedback?personId=18980065951&content=' + content, (result) => {
+				$.get(BASE_URL + '/NcpCmsApi/doFeedback?personId=#(personId)&content=' + content, (result) => {
 					alert(result.msg);
 				});
 			});

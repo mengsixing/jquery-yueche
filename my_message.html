@@ -65,7 +65,7 @@
 			},
 			methods: {
 				getData() {
-					$.get(BASE_URL + '/NcpCmsApi/getMessage?personId=18980065951&personType=1', (result) => {
+					$.get(BASE_URL + '/NcpCmsApi/getMessage?personId=#(personId)&personType=1', (result) => {
 						this.list = result.data;
 					});
 				}

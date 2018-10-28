@@ -51,7 +51,7 @@
 						<div class="value am-fr"><span>{{item.couponValue}}</span>元</div>
 						<div class="am-cf"></div>
 					</li>
-					
+
 				</ul>
 				<div class="am-cf"></div>
 			</div>
@@ -70,7 +70,7 @@
 			},
 			methods: {
 				getData() {
-					$.get(BASE_URL + '/NcpCmsApi/getMyCoupon?personId=18980065951', (result) => {
+					$.get(BASE_URL + '/NcpCmsApi/getMyCoupon?personId=#(personId)', (result) => {
 						this.list = result.data;
 					});
 				}
